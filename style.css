@@ -1,0 +1,144 @@
+/* index.html */
+body {
+  margin: 0;
+  font-family: "Merriweather", serif;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.header-container nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-container nav a img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.nav-links {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  margin: 0 15px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.main-title {
+  font-size: 72px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.sub-title .highlight {
+  color: rgb(0, 163, 218);
+}
+
+.sub-title .extra-highlight {
+  font-size: large;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.collection-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 50px 0 20px 0;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.about-page-left-content-container {
+  width: 400px;
+  height: 700px;
+  flex: 1;
+  padding: 20px;
+}
+
+.about-page-left-content-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-page-right-content-container {
+  flex-grow: 1;
+  flex: 2;
+}
+
+.about-page-right-content-nav-container a {
+  color: black;
+  font-size: 40px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s, font-size 0.3s, text-decoration 0.3s;
+}
+
+.about-page-right-content-nav-container a:hover {
+  font-size: 60px;
+}
+
+.about-page-right-content-nav-container a:active,
+.about-page-right-content-nav-container a:visited {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+}
+
+.code-block-container {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.code-block {
+  color: grey;
+  background-color: #e9eaeb;
+  border-radius: 8px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1em;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.code-block .pink {
+  color: hotpink;
+}
+
+.code-block .blue {
+  color: cornflowerblue;
+}
+
+.code-block .green {
+  color: rgb(158, 201, 122);
+}
+
+.code-block .yellow {
+  color: #e59d7b;
+}
+

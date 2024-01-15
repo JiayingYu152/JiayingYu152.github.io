@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" class="contact-form-page" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <nav>
+          <a href="https://github.com/JiayingYu152">
+            <img src="/data/github.svg" alt="Github" />
+          </a>
+          <a href="https://www.linkedin.com/in/jiaying-yu-belle4104/">
+            <img src="/data/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://www.producthunt.com/@belle_yu">
+            <img src="data/product-hunt.svg" alt="Product Hunt" />
+          </a>
+          <a href="https://www.instagram.com/biubiu125/">
+            <img src="data/instagram.svg" alt="Instagram" />
+          </a>
+          <span class="contact-link">
+            <a href="contact.html"><img src="data/envelope.svg" /></a>
+          </span>
+        </nav>
+      </div>
+    </header>
+    <section class="contact-page-content-container">
+      <h2>If you are interested in me, please feel free to contact me!!</h2>
+      <form
+        id="contact-form"
+        action="mailto: belleyu152@gmail.com"
+        method="post"
+      >
+        <div class="name-input-group">
+          <div class="contact-page-input-group">
+            <label for="first-name">First Name (required)</label>
+            <input type="text" id="first-name" name="first_name" required />
+          </div>
+          <div class="contact-page-input-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" />
+          </div>
+        </div>
+        <div class="contact-page-input-group">
+          <label for="email">Email (required)</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="contact-page-input-group">
+          <label for="subject">Subject (required)</label>
+          <input type="text" id="subject" name="subject" required />
+        </div>
+        <div class="contact-page-input-group">
+          <label for="message">Message (required)</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+
+  <footer>
+    <p>&copy; 2024 Jiaying Yu (Belle)</p>
+  </footer>
+</html>

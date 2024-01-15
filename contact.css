@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: "Merriweather", serif;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.contact-page-content-container {
+  font-family: "Merriweather", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the form is centered vertically */
+  margin: 0;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.contact-page-content-container h2 {
+  margin-bottom: 20px;
+}
+
+.header-container nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-container nav a img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+#contact-form {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.contact-page-input-group {
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.contact-page-input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-page-input-group input[type="text"],
+.contact-page-input-group input[type="email"],
+.contact-page-input-group textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.contact-page-input-group input[type="text"]:required,
+.contact-page-input-group input[type="email"]:required,
+.contact-page-input-group textarea:required {
+  border: 1px solidrgb(99, 98, 98) 0;
+}
+
+.name-input-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  width: 424px;
+  cursor: pointer;
+  background-color: white;
+  color: #007bff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: background-color 0.5s ease;
+  font-family: "Merriweather", serif;
+}
+
+button:hover {
+  background-color: #a0a0a0;
+  color: white;
+}
