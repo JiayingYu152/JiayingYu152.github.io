@@ -17,6 +17,28 @@ body {
   background-color: #f6f6f6;
 }
 
+.back-to-home {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
+  cursor: pointer; 
+}
+
+.back-to-home img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.back-to-home span {
+  display: none; 
+  transition: display 0.5s ease; 
+}
+
+.back-to-home:hover span {
+  display: inline;
+}
+
 .contact-page-content-container h2 {
   margin-bottom: 20px;
 }
@@ -36,7 +58,7 @@ body {
 #contact-form {
   width: 400px;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .contact-page-input-group {
@@ -85,4 +107,16 @@ button {
 button:hover {
   background-color: #a0a0a0;
   color: white;
+}
+
+.reset-button {
+  background-color: transparent;
+  columns: #007bff;
+  border: 1px solid #007bff;
+  padding: 5px 10px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: auto;
+  margin-bottom: 20px;
 }
