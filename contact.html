@@ -9,6 +9,37 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="contact.css" class="contact-form-page" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+              Accept: "application/json",
+            },
+          })
+            .then((response) => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error("Network response was not ok.");
+              }
+            })
+            .then((data) => {
+              console.log(data);
+              form.reset();
+            })
+            .catch((error) => {
+              console.log("Error", error);
+            });
+        });
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -33,12 +64,17 @@
       </div>
     </header>
     <section class="contact-page-content-container">
+      <div class="back-to-home" onclick="location.href='index.html'">
+        <img src="/data/previous.svg" alt="Go back to home page" />
+        <span>Go back to home page</span>
+      </div>
       <h2>If you are interested in me, please feel free to contact me!!</h2>
       <form
         id="contact-form"
-        action="mailto: belleyu152@gmail.com"
+        action="https://formspree.io/f/xzbnzakk"
         method="post"
       >
+        <button type="reset" class="reset-button">reset</button>
         <div class="name-input-group">
           <div class="contact-page-input-group">
             <label for="first-name">First Name (required)</label>
