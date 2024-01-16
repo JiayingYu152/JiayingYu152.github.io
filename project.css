@@ -61,9 +61,16 @@ body {
   padding: 20px;
 }
 
-ul {
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
-    justify-content: flex-start;
-  }
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.gallery img {
+  max-width: 100px;
+  height: auto;
+  margin: 5px;
+  cursor: pointer;
+}
