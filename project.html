@@ -61,117 +61,7 @@
           </ul>
         </div>
 
-        <div class="main-content-container">
-          <h1>Main Content</h1>
-          <p>Last Updated: Jan 15, 2024</p>
-          <hr />
-
-          <h2 id="section1">Pin & Ongoing</h2>
-          <div class="project-page-content">
-            <a href="https://seekai.tools/ai-tools">
-              <h3>Seekai.tool</h3>
-            </a>
-
-            <p><strong>Date</strong>: Nov 2023 - Present;</p>
-
-            <p>
-              <strong>Position</strong>: Full Stack Engineer Intern @ Nexa AI;
-            </p>
-
-            <p>
-              <strong>Techniques</strong>: HTML, CSS, JavaScript, React,
-              Java(Spring), Python(Flask), Google Cloud Platform, MongoDB
-            </p>
-            <p>
-              <strong>Short Description</strong>: Stability AI excels in
-              open-source, community-driven AI for ethical and accessible image
-              and text generation, democratizing AI across various industries.
-              Four primary pages including AI Tools, GPTs, Ranking, and Blogs to
-              help users quickly and efficiently find suitable AI tools among
-              over 12,170 AI tools and nearly 5,000 GPTs.
-            </p>
-
-            <ul>
-              <li>
-                Led the web development using HTML, CSS, and JavaScript
-                (focusing on the React framework), ensuring effective
-                <strong>mobile adaptation</strong> across various mobile
-                devices. Generated data visualization section in detail pages to
-                provide more realiable data of the AI Tools.
-              </li>
-              <li>
-                Managed user data and product content in MongoDB, ensuring
-                optimal data storage, integrity, and performance through
-                effective manipulation, cleaning, and optimization techniques by
-                using Python.
-              </li>
-              <li>
-                Utilized Google Analytics for user behavior tracking and
-                analysis, optimizing user journey paths, which led to over
-                <strong>1,000</strong> customer visits and attracted
-                <strong>943</strong> unique users within a month, resulting in a
-                steady growth of the user base.
-              </li>
-              <li>
-                Developed RESTful APIs for search engines and database
-                interactions, implemented in Python (Flask) and Java (Spring),
-                integrated with frontend, and tested for performance.
-              </li>
-              <li>
-                Collaborated with product managers on iterative product
-                development, achieving a user engagement uplift by increasing
-                the average page views to <strong>26.02</strong> per user,
-                indicative of enhanced user stickiness and refined product
-                details.
-              </li>
-            </ul>
-
-            <h4>Image Gallery</h4>
-            <div class="gallery">
-              <img
-                src="https://github.com/JiayingYu152/image-and-files/raw/5f69866b7d3deeeb9d6608b56fab7416669e67f4/ai%20tools%20page.png"
-                alt="ai tool page"
-              />
-              <img
-                src="https://github.com/JiayingYu152/image-and-files/raw/5f69866b7d3deeeb9d6608b56fab7416669e67f4/ai%20tools%20detail%20page.png"
-                alt="ai tool detail page"
-              />
-              <img
-                src="https://github.com/JiayingYu152/image-and-files/raw/5f69866b7d3deeeb9d6608b56fab7416669e67f4/Ranking%20page.png"
-                alt="ranking page"
-              />
-              <img
-                src="https://github.com/JiayingYu152/image-and-files/raw/5f69866b7d3deeeb9d6608b56fab7416669e67f4/ranking%20page%20mobile%20terminal.png"
-                alt="ranking page mobile terminal"
-              />
-            </div>
-
-            <a href="https://www.producthunt.com/products/seek-ai-tools"
-              >Seek AI Tools</a
-            >
-            <div>
-              Product Hunt Verified: Nov 2023<a
-                href="https://www.producthunt.com/products/nexa-ai"
-                >Nexa.ai</a
-              >
-              <img />
-            </div>
-          </div>
-
-          <h3>Build up my own website</h3>
-
-          <h3>Explore</h3>
-
-          <hr />
-
-          <h2 id="section2">Professional</h2>
-          <p>No.2 content</p>
-          <hr />
-
-          <h2 id="section3">Entreprenurship</h2>
-          <p>No.3 content</p>
-          <hr />
-        </div>
+        <div class="main-content-container"></div>
       </section>
     </main>
 
@@ -185,50 +75,84 @@
 
         images.forEach((image) => {
           image.addEventListener("click", () => {
-            console.log("Image clicked!"); // 调试信息
+            console.log("Image clicked!");
             window.open(image.src, "_blank");
           });
         });
       };
     </script>
-
     <script type="module">
-      import projectData from "./projectData.js";
-
-      function createImageGallery(images) {
-        return images
-          .map((image) => `<img src="${image}" alt="Project Image" />`)
-          .join("");
-      }
+      import { projectData } from "./projectData.js"; // 确保路径正确，并且 projectData.js 中有 export
 
       function createProjectSection(project) {
+        const techniques =
+          project.techniques.length > 0
+            ? `<p><strong>Techniques:</strong> ${project.techniques.join(
+                ", "
+              )}</p>`
+            : "";
+
+        const tasks =
+          project.tasks.length > 0
+            ? `<ul>${project.tasks
+                .map((task) => `<li>${task}</li>`)
+                .join("")}</ul>`
+            : "";
+        const images =
+          project.image_gallery.length > 0
+            ? `<div class="image-gallery">${project.image_gallery
+                .map((image) => `<img src="${image}" alt="Project Image" />`)
+                .join("")}</div>`
+            : "";
+
+        const verification = project.verification
+          ? `<p><strong>Verification:</strong> ${project.verification}</p>`
+          : "";
+        const verificationLink = project.verification_link
+          ? `<a href="${project.verification_link}" target="_blank">Verification Link</a>`
+          : "";
+        const additionalInfo = project.additional_information
+          ? `<p><strong>Additional Information:</strong> ${project.additional_information}</p>`
+          : "";
+
         return `
-      <div class="project-section">
-        <h3>${project.project_name}</h3>
-        <p><strong>Date:</strong> ${project.date}</p>
-        <p><strong>Role:</strong> ${project.role}</p>
-        <p><strong>Techniques:</strong> ${project.techniques.join(", ")}</p>
-        <p><strong>Description:</strong> ${project.short_description}</p>
-        <div class="image-gallery">
-          ${createImageGallery(project.image_gallery)}
-        </div>
-        <a href="${project.link}" target="_blank">Learn More</a>
-      </div>
-    `;
+          <div class="project-section">
+            <a href="${project.link}"><h3>${project.project_name}</h3></a>
+            <p><strong>Date:</strong> ${project.date}</p>
+            <p><strong>Role:</strong> ${project.role}</p>
+            <p><strong>Techniques:</strong> ${techniques}</p>
+            <p><strong>Description:</strong> ${project.short_description}</p>
+            <ul>${tasks}</ul>
+            <div class="image-gallery">${images}</div>
+            <p><strong>Verification:</strong> ${project.verification}</p>
+            <a href="${
+              project.verification_link
+            }" target="_blank">Verification Link</a>
+            <p><strong>Additional Information:</strong> ${
+              project.additional_information || ""
+            }</p>
+          </div>
+        `;
       }
 
-      function displayProjects() {
-        let htmlContent = "";
-        for (let category in projectData) {
-          htmlContent += `<h2>${category}</h2>`;
-          projectData[category].forEach((project) => {
-            htmlContent += createProjectSection(project);
+      function displayProject() {
+        const contentContainer = document.querySelector(
+          ".main-content-container"
+        );
+        contentContainer.innerHTML = ""; // 清除原有内容
+
+        Object.keys(projectData).forEach((section) => {
+          // 修改变量名拼写错误
+          const sectionElement = document.createElement("section");
+          sectionElement.innerHTML = `<h2 id="section${section}">${section}</h2>`;
+          projectData[section].forEach((project) => {
+            sectionElement.innerHTML += createProjectSection(project);
           });
-        }
-        document.getElementById("mainContent").innerHTML = htmlContent;
+          contentContainer.appendChild(sectionElement);
+        });
       }
 
-      window.onload = displayProjects;
+      window.addEventListener("load", displayProject); // 使用 addEventListener 而不是直接赋值
     </script>
   </body>
 </html>

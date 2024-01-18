@@ -1,4 +1,4 @@
-const projectData = {
+export const projectData = {
   Pin: [
     {
       project_name: "Seekai.tool",
