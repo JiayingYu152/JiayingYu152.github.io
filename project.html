@@ -73,11 +73,11 @@
             </a>
 
             <p><strong>Date</strong>: Nov 2023 - Present;</p>
-            
+
             <p>
               <strong>Position</strong>: Full Stack Engineer Intern @ Nexa AI;
             </p>
-           
+
             <p>
               <strong>Techniques</strong>: HTML, CSS, JavaScript, React,
               Java(Spring), Python(Flask), Google Cloud Platform, MongoDB
@@ -190,6 +190,45 @@
           });
         });
       };
+    </script>
+
+    <script type="module">
+      import projectData from "./projectData.js";
+
+      function createImageGallery(images) {
+        return images
+          .map((image) => `<img src="${image}" alt="Project Image" />`)
+          .join("");
+      }
+
+      function createProjectSection(project) {
+        return `
+      <div class="project-section">
+        <h3>${project.project_name}</h3>
+        <p><strong>Date:</strong> ${project.date}</p>
+        <p><strong>Role:</strong> ${project.role}</p>
+        <p><strong>Techniques:</strong> ${project.techniques.join(", ")}</p>
+        <p><strong>Description:</strong> ${project.short_description}</p>
+        <div class="image-gallery">
+          ${createImageGallery(project.image_gallery)}
+        </div>
+        <a href="${project.link}" target="_blank">Learn More</a>
+      </div>
+    `;
+      }
+
+      function displayProjects() {
+        let htmlContent = "";
+        for (let category in projectData) {
+          htmlContent += `<h2>${category}</h2>`;
+          projectData[category].forEach((project) => {
+            htmlContent += createProjectSection(project);
+          });
+        }
+        document.getElementById("mainContent").innerHTML = htmlContent;
+      }
+
+      window.onload = displayProjects;
     </script>
   </body>
 </html>
