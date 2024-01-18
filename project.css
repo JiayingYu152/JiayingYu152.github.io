@@ -48,6 +48,7 @@ body {
 
 .project-page-content-container {
   display: flex;
+  text-align: left;
 }
 
 .sidebar {
