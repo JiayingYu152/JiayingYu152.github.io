@@ -186,8 +186,20 @@
           modal.style.display = "none";
         };
       }
+
       updateSidebar(projectData);
       window.addEventListener("load", displayProject);
+
+      document.querySelectorAll(".image-gallery img").forEach((image) => {
+        image.onclick = function () {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        };
+      });
+
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
     </script>
   </body>
 </html>
