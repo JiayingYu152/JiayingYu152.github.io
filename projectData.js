@@ -29,6 +29,7 @@ export const projectData = {
         "https://github.com/JiayingYu152/image-and-files/raw/5f69866b7d3deeeb9d6608b56fab7416669e67f4/ai%20tools%20detail%20page.png",
         "https://github.com/JiayingYu152/image-and-files/raw/5f69866b7d3deeeb9d6608b56fab7416669e67f4/Ranking%20page.png",
         "https://github.com/JiayingYu152/image-and-files/raw/5f69866b7d3deeeb9d6608b56fab7416669e67f4/ranking%20page%20mobile%20terminal.png",
+        "https://github.com/JiayingYu152/image-and-files/raw/49925c59d3c18351fc482abeb587ea018197070b/seek_ai_tools_1.png",
       ],
       verification: "Product Hunt Verified: Nov 2023",
       verification_link: "https://www.producthunt.com/products/nexa-ai",
@@ -70,7 +71,11 @@ export const projectData = {
         "Conducted data processing and cleaning with <strong>Python</strong>, and organized data storage in <strong>MongoDB</strong> as well as on the <strong>Google Cloud Platform</strong>",
         "Conducted comprehensive feature testing to assess system reliability and adherence to project objectives, with a focus on evaluating the efficacy of various image-generating machine learning algorithms for optimal selection.",
       ],
-      image_gallery: [],
+      image_gallery: [
+        "https://github.com/JiayingYu152/image-and-files/raw/49925c59d3c18351fc482abeb587ea018197070b/nexa_ai_2.png",
+        "https://github.com/JiayingYu152/image-and-files/raw/49925c59d3c18351fc482abeb587ea018197070b/advanced-GA-certificate.png",
+        "https://github.com/JiayingYu152/image-and-files/raw/49925c59d3c18351fc482abeb587ea018197070b/GA-certificate.png",
+      ],
       verification: "Product Hunt Verified: Nov 2023",
       verification_link: "https://www.producthunt.com/products/nexa-ai",
       additional_information:
@@ -95,7 +100,9 @@ export const projectData = {
         "Implemented token-based server-side user authentication based on the <strong>Spring Security</strong>framework.",
         "Leveraged <strong>MySQL</strong> for efficient and reliable data storage in the database.",
       ],
-      image_gallery: [],
+      image_gallery: [
+        "https://github.com/JiayingYu152/image-and-files/raw/49925c59d3c18351fc482abeb587ea018197070b/full-stack-certificate.png",
+      ],
       verification: "",
       verification_link: "",
     },
@@ -190,8 +197,8 @@ export const projectData = {
   ],
   Entrepreneurship: [
     {
-      project_name: "EyeSnap (Our Team Won Bayer CHALLENGE Global Champion)",
-      link: "https://www.youtube.com/watch?v=RQdKQIvrKkc (started 1:22)",
+      project_name: "EyeSnap (Our Team Won Bayer Challenge Global Champion)",
+      link: "https://www.youtube.com/watch?v=RQdKQIvrKkc",
       date: "Oct 2022 – Dec 2022",
       role: "Technical Support, Product Designer",
       techniques: [
@@ -205,9 +212,14 @@ export const projectData = {
         "<strong>Sensory data/Cloud computing/Database</strong>: We collect the sensor data from three sensors in glass frames. These raw data will be transmitted to the cloud database. We make cloud computing as our database carrier because we will input all of the AI algorithms into the cloud and all data computing and AI diagnosis technologies will be done in the cloud. Regarding the database, at the initial stage, we need to collect the medical history from the ophthalmology clinic and experiment; later, we would upload our experiment data to the cloud database. By combining both database and further data collection, we develop a database and diagnosis system more accurately and precisely. The reason why we are using AI algorithm and Cloud storage is to reduce the artificial risk of data leakage. Also, EyeSnap cares the data privacy issue as well. EyeSnap will apply the platform encryption algorithm to protect data security. Only by admitted by the users, these data would be transferred to ophthalmologist and third-party organizations.",
         "<strong>AI algorithm</strong>: Current AI algorithms, including ML and Deep Learning algorithms, can achieve over 82% diagnostic accuracy in glaucomatous VFs. The current research results came from some Glaucoma Hemifield Test (GHT) tests and pattern standard deviation (PSD). AI algorithm has been investigated and developed for automated glaucoma detection that can quickly process the retinal images and accurately detect glaucomatous damage on pathological tests compared to conventional methods. Also, the current AI algorithm can be used for diagnosing and grading cataracts. To sum up, the technological part of the AI algorithm is practical and feasible.",
       ],
-      image_gallery: [],
-      verification: "",
-      verification_link: "",
+      image_gallery: [
+        "https://github.com/JiayingYu152/image-and-files/raw/e04654c7a2b4022cb96aa29a89b18505cd48d7ae/eyesnap_1.png",
+        "https://github.com/JiayingYu152/image-and-files/raw/e04654c7a2b4022cb96aa29a89b18505cd48d7ae/eyesnap_2.png",
+        "https://github.com/JiayingYu152/image-and-files/raw/e04654c7a2b4022cb96aa29a89b18505cd48d7ae/eyesnap_3.png",
+      ],
+      verification:
+        "Bayer Challenge Global Champion in 2022 (video started 1:22)",
+      verification_link: "https://www.youtube.com/watch?v=RQdKQIvrKkc",
     },
     {
       project_name: "Truck Space Optimization System (Project Stopped)",
@@ -237,7 +249,12 @@ export const projectData = {
         "Leveraged <strong>Figma</strong> to design an intuitive UI that guides users through a clear and concise product flow for immediate trial, featuring an AI chatbot for tailored apartment recommendations, strategic tagging to highlight property features, and 3D blueprints to meet customer demands with a user-friendly interface.",
         "Engineered the product's core functionality to enhance the quality of apartment search and recommendations using AI's machine learning algorithms, coupled with web scraping for data collection and human curation for precision, all within a one-stop service platform to minimize user navigation.",
       ],
-      image_gallery: [],
+      image_gallery: [
+        "https://github.com/JiayingYu152/image-and-files/raw/e04654c7a2b4022cb96aa29a89b18505cd48d7ae/roomlink_1.png",
+        "https://github.com/JiayingYu152/image-and-files/raw/e04654c7a2b4022cb96aa29a89b18505cd48d7ae/roomlink_2.png",
+        "https://github.com/JiayingYu152/image-and-files/raw/e04654c7a2b4022cb96aa29a89b18505cd48d7ae/roomlink_3.png",
+        "https://github.com/JiayingYu152/image-and-files/raw/e04654c7a2b4022cb96aa29a89b18505cd48d7ae/roomlink_4.png",
+      ],
       verification: "",
       verification_link: "",
     },

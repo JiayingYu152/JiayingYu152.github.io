@@ -78,6 +78,8 @@
           .replace(/\s+/g, "-")
           .toLowerCase();
 
+        const linkHref = project.link ? project.link : `#${projectId}`;
+
         const techniques =
           project.techniques.length > 0
             ? `<p><strong>Techniques:</strong> ${project.techniques.join(
@@ -99,6 +101,14 @@
                 .join("")}</div>`
             : "";
 
+        const techList = project.techniques
+          ? ` <p class="techniques"><strong>Techniques: </strong> ${project.techniques}</p>`
+          : "";
+
+        const desc = project.short_description
+          ? ` <p class="short-description"><strong>Description: </strong> ${project.short_description}</p>`
+          : "";
+
         const verification =
           project.verification && project.verification_link
             ? `<p><strong><a class="verification" href="${project.verification_link}" target="_blank">Verification: </a></strong> ${project.verification}</p>`
@@ -110,14 +120,14 @@
 
         return `
                 <div class="project-section">
-                  <a href="#${projectId}"><h3 id="${projectId}">${project.project_name}</h3></a>
+                  <a href="${linkHref}"><h3 id="${projectId}">${project.project_name}</h3></a>
 
                   <div class="date-role-container">
                      <p><strong>Date: </strong> ${project.date}</p>
                     <p><strong>Role: </strong> ${project.role}</p>
                     </div>
-                    <p class="techniques"><strong>Techniques: </strong>${project.techniques}</p>
-                    <p class="short-description"><strong>Description: </strong> ${project.short_description}</p>
+                    ${techList}
+                    ${desc}
                     ${tasks}
                     ${images}
                     ${verification}
