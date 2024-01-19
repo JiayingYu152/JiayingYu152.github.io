@@ -53,27 +53,141 @@
     <main>
       <section class="project-page-content-container">
         <div class="sidebar">
-          <h2>Content</h2>
-          <ul>
-            <li><a href="section1">No.1</a></li>
-            <li><a href="section2">No.2</a></li>
-          </ul>
+          <h2>Project Content</h2>
+          <ol></ol>
         </div>
-        <div class="main-content-container">
-          <h1>Main Content</h1>
-          <h2 id="section1">No.1</h2>
-          <p>No.1 content</p>
-          <hr />
 
-          <h2 id="section2">No.2</h2>
-          <p>No.2 content</p>
-          <hr />
-        </div>
+        <div class="main-content-container"></div>
       </section>
     </main>
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+    </div>
 
     <footer>
       <p>&copy; 2024 Jiaying Yu (Belle)</p>
     </footer>
+
+    <script type="module">
+      import { projectData } from "./projectData.js";
+
+      function createProjectSection(project) {
+        const projectId = project.project_name
+          .replace(/\s+/g, "-")
+          .toLowerCase();
+
+        const linkHref = project.link ? project.link : `#${projectId}`;
+
+        const techniques =
+          project.techniques.length > 0
+            ? `<p><strong>Techniques:</strong> ${project.techniques.join(
+                ", "
+              )}</p>`
+            : "";
+
+        const tasks =
+          project.tasks.length > 0
+            ? `<ul>${project.tasks
+                .map((task) => `<li>${task}</li>`)
+                .join("")}</ul>`
+            : "";
+
+        const images =
+          project.image_gallery.length > 0
+            ? `<div class="image-gallery">${project.image_gallery
+                .map((image) => `<img src="${image}" alt="Project Image" />`)
+                .join("")}</div>`
+            : "";
+
+        const techList = project.techniques
+          ? ` <p class="techniques"><strong>Techniques: </strong> ${project.techniques}</p>`
+          : "";
+
+        const desc = project.short_description
+          ? ` <p class="short-description"><strong>Description: </strong> ${project.short_description}</p>`
+          : "";
+
+        const verification =
+          project.verification && project.verification_link
+            ? `<p><strong><a class="verification" href="${project.verification_link}" target="_blank">Verification: </a></strong> ${project.verification}</p>`
+            : "";
+
+        const additionalInfo = project.additional_information
+          ? `<p><strong>Additional Information:</strong> ${project.additional_information}</p>`
+          : "";
+
+        return `
+                <div class="project-section">
+                  <a href="${linkHref}"><h3 id="${projectId}">${project.project_name}</h3></a>
+
+                  <div class="date-role-container">
+                     <p><strong>Date: </strong> ${project.date}</p>
+                    <p><strong>Role: </strong> ${project.role}</p>
+                    </div>
+                    ${techList}
+                    ${desc}
+                    ${tasks}
+                    ${images}
+                    ${verification}
+                    ${additionalInfo}
+                </div>
+            `;
+      }
+
+      function updateSidebar() {
+        const sidebar = document.querySelector(".sidebar ol");
+
+        let sectionIndex = 1;
+        for (const section in projectData) {
+          let sectionContent = `<li><strong>${section}</strong><ol>`;
+          const projects = projectData[section];
+          projects.forEach((project, index) => {
+            const projectNumber = `${sectionIndex}.${index + 1}`;
+            const projectId = project.project_name
+              .replace(/\s+/g, "-")
+              .toLowerCase();
+            sectionContent += `<li><a href="#${projectId}">${projectNumber} ${project.project_name}</a></li>`;
+          });
+          sectionContent += "</ol></li>";
+          sidebar.innerHTML += sectionContent;
+          sectionIndex++;
+        }
+      }
+
+      function displayProject() {
+        const contentContainer = document.querySelector(
+          ".main-content-container"
+        );
+        contentContainer.innerHTML = "";
+
+        Object.keys(projectData).forEach((section) => {
+          const sectionElement = document.createElement("section");
+          sectionElement.innerHTML = `<h2 id="section${section}">${section}</h2>`;
+          projectData[section].forEach((project) => {
+            sectionElement.innerHTML += createProjectSection(project);
+          });
+          contentContainer.appendChild(sectionElement);
+        });
+
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("img01");
+        const span = document.getElementsByClassName("close")[0];
+
+        document.querySelectorAll(".image-gallery img").forEach((image) => {
+          image.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+          };
+        });
+
+        span.onclick = function () {
+          modal.style.display = "none";
+        };
+      }
+      updateSidebar(projectData);
+      window.addEventListener("load", displayProject);
+    </script>
   </body>
 </html>
