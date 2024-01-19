@@ -54,37 +54,30 @@
       <section class="project-page-content-container">
         <div class="sidebar">
           <h2>Project Content</h2>
-          <ul>
-            <li><a href="section1">Pin & Ongoing</a></li>
-            <li><a href="section2">Professional</a></li>
-            <li><a href="section3">Entreprenurship</a></li>
-          </ul>
+          <ol></ol>
         </div>
 
         <div class="main-content-container"></div>
       </section>
     </main>
 
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+    </div>
+
     <footer>
       <p>&copy; 2024 Jiaying Yu (Belle)</p>
     </footer>
 
-    <script>
-      window.onload = function () {
-        const images = document.querySelectorAll(".gallery img");
-
-        images.forEach((image) => {
-          image.addEventListener("click", () => {
-            console.log("Image clicked!");
-            window.open(image.src, "_blank");
-          });
-        });
-      };
-    </script>
     <script type="module">
-      import { projectData } from "./projectData.js"; // 确保路径正确，并且 projectData.js 中有 export
+      import { projectData } from "./projectData.js";
 
       function createProjectSection(project) {
+        const projectId = project.project_name
+          .replace(/\s+/g, "-")
+          .toLowerCase();
+
         const techniques =
           project.techniques.length > 0
             ? `<p><strong>Techniques:</strong> ${project.techniques.join(
@@ -98,6 +91,7 @@
                 .map((task) => `<li>${task}</li>`)
                 .join("")}</ul>`
             : "";
+
         const images =
           project.image_gallery.length > 0
             ? `<div class="image-gallery">${project.image_gallery
@@ -105,44 +99,60 @@
                 .join("")}</div>`
             : "";
 
-        const verification = project.verification
-          ? `<p><strong>Verification:</strong> ${project.verification}</p>`
-          : "";
-        const verificationLink = project.verification_link
-          ? `<a href="${project.verification_link}" target="_blank">Verification Link</a>`
-          : "";
+        const verification =
+          project.verification && project.verification_link
+            ? `<p><strong><a class="verification" href="${project.verification_link}" target="_blank">Verification: </a></strong> ${project.verification}</p>`
+            : "";
+
         const additionalInfo = project.additional_information
           ? `<p><strong>Additional Information:</strong> ${project.additional_information}</p>`
           : "";
 
         return `
-          <div class="project-section">
-            <a href="${project.link}"><h3>${project.project_name}</h3></a>
-            <p><strong>Date:</strong> ${project.date}</p>
-            <p><strong>Role:</strong> ${project.role}</p>
-            <p><strong>Techniques:</strong> ${techniques}</p>
-            <p><strong>Description:</strong> ${project.short_description}</p>
-            <ul>${tasks}</ul>
-            <div class="image-gallery">${images}</div>
-            <p><strong>Verification:</strong> ${project.verification}</p>
-            <a href="${
-              project.verification_link
-            }" target="_blank">Verification Link</a>
-            <p><strong>Additional Information:</strong> ${
-              project.additional_information || ""
-            }</p>
-          </div>
-        `;
+                <div class="project-section">
+                  <a href="#${projectId}"><h3 id="${projectId}">${project.project_name}</h3></a>
+
+                  <div class="date-role-container">
+                     <p><strong>Date: </strong> ${project.date}</p>
+                    <p><strong>Role: </strong> ${project.role}</p>
+                    </div>
+                    <p class="techniques"><strong>Techniques: </strong>${project.techniques}</p>
+                    <p class="short-description"><strong>Description: </strong> ${project.short_description}</p>
+                    ${tasks}
+                    ${images}
+                    ${verification}
+                    ${additionalInfo}
+                </div>
+            `;
+      }
+
+      function updateSidebar() {
+        const sidebar = document.querySelector(".sidebar ol");
+
+        let sectionIndex = 1;
+        for (const section in projectData) {
+          let sectionContent = `<li><strong>${section}</strong><ol>`;
+          const projects = projectData[section];
+          projects.forEach((project, index) => {
+            const projectNumber = `${sectionIndex}.${index + 1}`;
+            const projectId = project.project_name
+              .replace(/\s+/g, "-")
+              .toLowerCase();
+            sectionContent += `<li><a href="#${projectId}">${projectNumber} ${project.project_name}</a></li>`;
+          });
+          sectionContent += "</ol></li>";
+          sidebar.innerHTML += sectionContent;
+          sectionIndex++;
+        }
       }
 
       function displayProject() {
         const contentContainer = document.querySelector(
           ".main-content-container"
         );
-        contentContainer.innerHTML = ""; // 清除原有内容
+        contentContainer.innerHTML = "";
 
         Object.keys(projectData).forEach((section) => {
-          // 修改变量名拼写错误
           const sectionElement = document.createElement("section");
           sectionElement.innerHTML = `<h2 id="section${section}">${section}</h2>`;
           projectData[section].forEach((project) => {
@@ -150,9 +160,24 @@
           });
           contentContainer.appendChild(sectionElement);
         });
-      }
 
-      window.addEventListener("load", displayProject); // 使用 addEventListener 而不是直接赋值
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("img01");
+        const span = document.getElementsByClassName("close")[0];
+
+        document.querySelectorAll(".image-gallery img").forEach((image) => {
+          image.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+          };
+        });
+
+        span.onclick = function () {
+          modal.style.display = "none";
+        };
+      }
+      updateSidebar(projectData);
+      window.addEventListener("load", displayProject);
     </script>
   </body>
 </html>
