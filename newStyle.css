@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: "Lora", serif;
+  text-align: center;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  line-height: 1.6;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+
+.main-page-left-container {
+  width: 50%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.main-page-left-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-page-right-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-page-right-container-title-container {
+  margin: 40px;
+  margin-top: 200px;
+}
+
+.main-page-right-container-title-full-name {
+  font-size: 70px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.main-page-right-container-title-english-name {
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.about-page-right-content-nav-container a {
+  color: black;
+  font-size: 30px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s, font-size 0.3s, text-decoration 0.3s;
+}
+
+.about-page-right-content-nav-container ul {
+  padding: 0;
+}
+
+.about-page-right-content-nav-container a:hover {
+  font-size: 50px;
+}
+
+.about-page-right-content-nav-container a:active,
+.about-page-right-content-nav-container a:visited {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+}
+
+.main-page-bottom-content-container nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-page-bottom-content-container nav a img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
