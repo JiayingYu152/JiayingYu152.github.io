@@ -2,21 +2,52 @@ body {
   margin: 0;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: #ff3f8c23;
   overflow: hidden;
   line-height: 1.6;
 }
 
-.header-container nav {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(103, 101, 110);
+  color: white;
+}
+
+.header-left-content-container a {
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.5s, font-size 0.5s, text-decoration 0.5s;
+}
+
+.header-left-content-container a:hover {
+  font-size: 30px;
+  color: white;
+}
+
+.header-right-content-container nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.header-container nav a img {
+.header-right-content-container nav a img {
   height: 50px;
   width: auto;
+  color: white !important;
   margin-right: 10px;
+}
+
+.about-page-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-links {
@@ -34,7 +65,7 @@ body {
 
 .code-block-container {
   padding: 20px;
-  overflow: hidden;
+  width: 70%;
 }
 
 .code-block {
@@ -47,6 +78,12 @@ body {
   word-break: break-all;
   overflow-x: auto;
   text-align: left;
+  margin: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-width: 630px;
 }
 
 .code-block .pink {

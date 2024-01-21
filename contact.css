@@ -102,6 +102,7 @@ button {
   font-size: 16px;
   transition: background-color 0.5s ease;
   font-family: "Merriweather", serif;
+  margin: 10px 0;
 }
 
 button:hover {
@@ -109,14 +110,4 @@ button:hover {
   color: white;
 }
 
-.reset-button {
-  background-color: transparent;
-  columns: #007bff;
-  border: 1px solid #007bff;
-  padding: 5px 10px;
-  text-align: center;
-  cursor: pointer;
-  display: inline-block;
-  margin-left: auto;
-  margin-bottom: 20px;
-}
+

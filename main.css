@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(141, 217, 191, 0.1);
   overflow: hidden;
   line-height: 1.6;
 }
@@ -10,23 +10,41 @@ body {
 main {
   display: flex;
   height: 100vh;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.main-page-central-inner-container {
+  width: 80%;
+  height: 80%;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
 }
 
 .main-page-left-container {
-  width: 50%;
   flex: 1;
+  width: 50%;
   overflow: hidden;
-  box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.355);
+}
+
+.main-page-left-image-container {
+  height: 95%;
+  justify-items: center;
 }
 
 .main-page-left-container img {
-  width: 100%;
+  width: 80%;
   height: 100%;
   object-fit: cover;
+  align-content: flex-end;
 }
 
 .main-page-right-container {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,6 +53,7 @@ main {
 
 .main-page-right-content-container {
 }
+
 .main-page-right-container-title-container {
   margin: 40px;
   margin-top: 20%;
@@ -50,7 +69,7 @@ main {
 
 .main-page-right-container-title-english-name {
   font-size: 50px;
-  font-weight: 400;
+  font-weight: 700;
   margin: 0;
 }
 
@@ -60,7 +79,7 @@ main {
 
 .about-page-right-content-nav-container a {
   color: black;
-  font-size: 30px;
+  font-size: 40px;
   padding: 0 20px;
   border-radius: 5px;
   margin: 0 10px;
@@ -71,7 +90,7 @@ main {
 
 .about-page-right-content-nav-container a:hover {
   font-size: 50px;
-  color: rgb(99, 153, 84);
+  color: rgb(141, 217, 191);
 }
 
 /* .about-page-right-content-nav-container a:active,
