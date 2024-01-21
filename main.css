@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: #ff3f8c23;
+  background-color: rgb(255, 255, 255);
   overflow: hidden;
   line-height: 1.6;
 }
@@ -29,11 +29,15 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.main-page-right-content-container {
+}
 .main-page-right-container-title-container {
   margin: 40px;
-  margin-top: 130px;
+  margin-top: 20%;
   margin-bottom: 0;
 }
 
@@ -41,6 +45,7 @@ main {
   font-size: 70px;
   font-weight: 900;
   margin-bottom: 0;
+  margin-top: 20px;
 }
 
 .main-page-right-container-title-english-name {
@@ -56,7 +61,7 @@ main {
 .about-page-right-content-nav-container a {
   color: black;
   font-size: 30px;
-  padding: 10px 20px;
+  padding: 0 20px;
   border-radius: 5px;
   margin: 0 10px;
   display: inline-block;
@@ -66,19 +71,23 @@ main {
 
 .about-page-right-content-nav-container a:hover {
   font-size: 50px;
-  color: deeppink;
+  color: rgb(99, 153, 84);
 }
 
-.about-page-right-content-nav-container a:active,
+/* .about-page-right-content-nav-container a:active,
 .about-page-right-content-nav-container a:visited {
   color: inherit;
   text-decoration: none;
   font-size: inherit;
-}
+} */
 
 .about-page-right-content-nav-container p {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.main-page-bottom-content-container {
+  margin: 10px 0;
 }
 
 .main-page-bottom-content-container nav {
@@ -92,4 +101,8 @@ main {
   height: 40px;
   width: auto;
   margin-top: 10px;
+}
+
+.main-page-bottom-content-container nav a img:hover {
+  height: 55px;
 }

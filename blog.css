@@ -10,11 +10,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #f8f8f8;
+  background-color: rgb(99, 153, 84);
+  color: white;
 }
 
 .header-left-content-container a {
-  color: black;
+  color: white;
   font-size: 20px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -26,12 +27,7 @@ body {
 
 .header-left-content-container a:hover {
   font-size: 30px;
-}
-.header-left-content-container a:active,
-.header-left-content-container a:visited {
-  color: inherit;
-  text-decoration: none;
-  font-size: inherit;
+  color: white;
 }
 
 .header-right-content-container nav {
@@ -43,6 +39,7 @@ body {
 .header-right-content-container nav a img {
   height: 50px;
   width: auto;
+  color: white !important;
   margin-right: 10px;
 }
 
