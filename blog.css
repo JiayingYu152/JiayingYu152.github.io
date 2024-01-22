@@ -1,8 +1,12 @@
 body {
   margin: 0;
-  font-family: "Merriweather", serif;
+  font-family: "Lora", serif;
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: white;
+  min-width: 968px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-size: 16px;
 }
 
 .header-container {
@@ -10,7 +14,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: rgb(99, 153, 84);
+  background-color:rgb(141, 217, 191);
   color: white;
 }
 
