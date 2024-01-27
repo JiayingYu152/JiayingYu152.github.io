@@ -41,9 +41,9 @@ body {
 }
 
 .header-right-content-container nav a img {
-  height: 50px;
+  height: 40px;
   width: auto;
-  color: white !important;
+  margin-left: 10px;
   margin-right: 10px;
 }
 

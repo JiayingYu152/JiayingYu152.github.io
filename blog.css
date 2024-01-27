@@ -14,7 +14,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color:rgb(141, 217, 191);
+  background-color: rgb(141, 217, 191);
   color: white;
 }
 
@@ -41,9 +41,9 @@ body {
 }
 
 .header-right-content-container nav a img {
-  height: 50px;
+  height: 40px;
   width: auto;
-  color: white !important;
+  margin-left: 10px;
   margin-right: 10px;
 }
 
