@@ -73,13 +73,14 @@ body {
 .about-page-left-content-container {
   width: auto;
   height: 400px;
+  max-width: 400px;
   min-width: 172px;
   flex: 1;
   padding: 20px;
 }
 
 .about-page-left-content-container img {
-  width: 100%;
+  width: auto;
   height: 100%;
   border-radius: 10px;
   padding-top: 35px;
@@ -155,6 +156,7 @@ body {
 
   .content-container {
     flex-direction: column-reverse;
+    align-items: center;
   }
 
   .main-title {
