@@ -1,9 +1,8 @@
 body {
-  margin: 0;
+  margin: 10px;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: white;
-  min-width: 968px;
+  background-color: rgb(141, 217, 191, 0.05);
   line-height: 1.5;
   letter-spacing: 1px;
   font-size: 16px;
@@ -13,22 +12,22 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .contact-page-left-content-container {
   display: flex;
   width: 40%;
   border-radius: 20px;
-  background-color: rgb(141, 217, 191, 0.2);
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
 .contact-page-left-content-circle-for-picture-container {
   max-width: 650px;
   max-height: 850px;
-  border-radius: 40%;
+  border-radius: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,8 +35,8 @@ main {
 }
 
 .contact-page-left-content-circle-for-picture-container img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -49,7 +48,7 @@ main {
   min-height: 100vh; /* Ensure the form is centered vertically */
   margin: 0;
   text-align: center;
-  gap: 20px;
+  gap: 5px;
 }
 
 .back-to-home {
@@ -90,7 +89,7 @@ main {
 }
 
 .header-container nav a img {
-  height: 50px;
+  height: 40px;
   width: auto;
   margin-left: 15px;
   margin-right: 15px;
@@ -102,17 +101,19 @@ main {
 }
 
 .contact-page-right-content-container h2 {
+  font-size: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 #contact-form {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: 20px auto;
 }
 
 .contact-page-input-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 10px;
 }
 
@@ -124,7 +125,8 @@ main {
 
 .contact-page-input-group input[type="text"],
 .contact-page-input-group input[type="email"],
-.contact-page-input-group textarea {
+.contact-page-input-group textarea,
+.contact-page-input-group message {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -133,7 +135,8 @@ main {
 
 .contact-page-input-group input[type="text"]:required,
 .contact-page-input-group input[type="email"]:required,
-.contact-page-input-group textarea:required {
+.contact-page-input-group textarea:required,
+.contact-page-input-group message:required {
   border: 1px solidrgb(99, 98, 98) 0;
 }
 
@@ -144,7 +147,8 @@ main {
 
 button {
   padding: 10px 20px;
-  width: 424px;
+  width: 100%;
+  max-width: 424px;
   cursor: pointer;
   background-color: white;
   color: rgb(141, 217, 191);
@@ -159,4 +163,23 @@ button {
 button:hover {
   background-color: rgb(141, 217, 191);
   color: rgba(0, 0, 0, 0.616);
+}
+
+@media screen and (max-width: 993px) {
+  .main {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .contact-page-left-content-container {
+    display: none;
+  }
+
+  .name-input-group {
+    flex-direction: column;
+  }
+
+  #contact-form {
+    width: 70%;
+  }
 }
