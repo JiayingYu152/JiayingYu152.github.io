@@ -6,7 +6,7 @@ body {
   line-height: 1.5;
   letter-spacing: 1px;
   font-size: 16px;
-  color: #73a3f7;
+  color: #a7072d;
 }
 
 main {
@@ -17,7 +17,7 @@ main {
 }
 
 .contact-page-right-content-container h2 {
-  color: #73a3f7;
+  color: #a7072d;
 }
 
 .contact-page-left-content-container {
@@ -78,7 +78,7 @@ main {
 
 .back-to-home:hover span {
   display: inline;
-  color: #73a3f7;
+  color: #e587a8;
   size: 16px;
 }
 
@@ -142,7 +142,7 @@ main {
 .contact-page-input-group input[type="email"]:required,
 .contact-page-input-group textarea:required,
 .contact-page-input-group message:required {
-  border: 1px solid #73a3f7;
+  border: 1px solid #a7072d;
 }
 
 .name-input-group {
@@ -155,9 +155,9 @@ button {
   width: 100%;
   max-width: 424px;
   cursor: pointer;
-  background-color: #f6f3ce;
-  color: #73a3f7;
-  border: 1px solid #73a3f7;
+  background-color: #e9e6c5;
+  color: #a7072d;
+  border: 1px solid #a7072d;
   border-radius: 10px;
   font-size: 20px;
   transition: background-color 0.5s ease;
@@ -166,8 +166,8 @@ button {
 }
 
 button:hover {
-  background-color: #68e19a;
-  border: 1px solid #68e19a;
+  background-color: #e587a8;
+  border: 1px solid #e587a8;
   color: white;
 }
 

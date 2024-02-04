@@ -3,6 +3,7 @@ body {
   font-family: "Lora", serif;
   text-align: center;
   background-color: #fcfbe8;
+  color: #151318;
   min-width: 968px;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -14,7 +15,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #73a3f7;
+  background-color: #a7072d;
   color: white;
 }
 

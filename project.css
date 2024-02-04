@@ -3,6 +3,7 @@ body {
   font-family: "Lora", serif;
   text-align: center;
   background-color: #fcfbe8;
+  color: #151318;
   min-width: 968px;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -14,7 +15,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #73a3f7;
+  background-color: #a7072d;
   color: white;
 }
 
@@ -62,20 +63,19 @@ body {
   margin-bottom: 5px;
 }
 
-.sidebar h2,
 .main-content-container h2 {
-  color: #68e19a;
+  color: #a7072d;
   font-size: 24px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.sidebar strong {
-  color: rgba(104, 225, 154, 0.8);
+.sidebar h2 {
+  color: #a7072d;
 }
 
 .sidebar a {
-  color: #73a3f7;
+  color: #151318;
 }
 
 .main-content-container h3 {
@@ -104,7 +104,12 @@ body {
 }
 
 .project-section strong {
-  color: #73a3f7;
+  color: #e587a8;
+}
+
+.project-section a,
+.project-section h3 {
+  color: #a7072d;
 }
 
 .date-role-container {
@@ -119,7 +124,8 @@ body {
 
 .sidebar {
   flex: 0 0 20%;
-  background-color: #f6f3ce;
+  background-color: rgba(167, 7, 45, 0.2);
+  color: white;
   padding: 20px;
   text-align: left;
 }
@@ -146,22 +152,12 @@ body {
 }
 
 .techniques {
-  color: #68e19a;
+  color: rgba(167, 7, 45, 0.8);
   font-weight: 550;
 }
 
 .short-description {
-  color: rgb(164, 164, 164);
-}
-
-.verification-container {
-  font-style: italic;
-  color: #68e19a;
-  text-decoration: none;
-}
-
-.verification-container:hover {
-  text-decoration: underline;
+  color: rgba(167, 7, 45, 0.5);
 }
 
 .image-gallery img {
