@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: white;
+  background-color: #fcfbe8;
   min-width: 968px;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -14,7 +14,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: rgb(141, 217, 191);
+  background-color: #73a3f7;
   color: white;
 }
 

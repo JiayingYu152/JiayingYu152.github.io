@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: rgb(141, 217, 191, 0.05);
+  background-color: #fcfbe8;
 }
 
 .header-container nav {
@@ -45,7 +45,7 @@ body {
 }
 
 .sub-title .highlight {
-  color: rgba(37, 175, 126, 0.9);
+  color: #73a3f7;
 }
 
 .sub-title .extra-highlight {
@@ -112,7 +112,7 @@ body {
 
 .about-page-right-content-nav-container a:hover {
   font-size: 60px;
-  color: rgb(141, 217, 191);
+  color: #73a3f7;
 }
 
 .code-block-container {
@@ -121,7 +121,7 @@ body {
 
 .code-block {
   color: grey;
-  background-color: rgb(141, 217, 191, 0.2);
+  background-color: #f6f3ce;
   border-radius: 8px;
   font-family: "Courier New", Courier, monospace;
   font-size: 1.1em;
@@ -140,7 +140,7 @@ body {
 }
 
 .code-block .green {
-  color: rgb(110, 144, 81);
+  color: #68e19a;
 }
 
 .code-block .yellow {

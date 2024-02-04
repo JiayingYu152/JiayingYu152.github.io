@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: white;
+  background-color: #fcfbe8;
   min-width: 968px;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -14,7 +14,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: rgb(141, 217, 191);
+  background-color: #73a3f7;
   color: white;
 }
 
@@ -62,15 +62,24 @@ body {
   margin-bottom: 5px;
 }
 
+.sidebar h2,
 .main-content-container h2 {
-  color: rgb(74, 115, 62);
+  color: #68e19a;
   font-size: 24px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
+.sidebar strong {
+  color: rgba(104, 225, 154, 0.8);
+}
+
+.sidebar a {
+  color: #73a3f7;
+}
+
 .main-content-container h3 {
-  color: rgb(74, 115, 62, 0.9);
+  /* color: #68e19a; */
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -95,7 +104,7 @@ body {
 }
 
 .project-section strong {
-  color: rgb(74, 115, 62, 0.9);
+  color: #73a3f7;
 }
 
 .date-role-container {
@@ -110,7 +119,7 @@ body {
 
 .sidebar {
   flex: 0 0 20%;
-  background-color: rgb(141, 217, 191, 0.2);
+  background-color: #f6f3ce;
   padding: 20px;
   text-align: left;
 }
@@ -137,15 +146,17 @@ body {
 }
 
 .techniques {
-  color: rgb(75, 116, 64);
+  color: #68e19a;
+  font-weight: 550;
 }
+
 .short-description {
-  color: rgb(75, 116, 64, 0.6);
+  color: rgb(164, 164, 164);
 }
 
 .verification-container {
   font-style: italic;
-  color: blue;
+  color: #68e19a;
   text-decoration: none;
 }
 
@@ -169,7 +180,6 @@ body {
   height: 100%;
   overflow: auto;
   background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
