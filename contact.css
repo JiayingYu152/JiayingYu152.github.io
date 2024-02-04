@@ -2,11 +2,11 @@ body {
   margin: 10px;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: #fcfbe8;
+  background-color: #eef5ff;
+  color: #0f2167;
   line-height: 1.5;
   letter-spacing: 1px;
   font-size: 16px;
-  color: #a7072d;
 }
 
 main {
@@ -16,9 +16,9 @@ main {
   gap: 10px;
 }
 
-.contact-page-right-content-container h2 {
-  color: #a7072d;
-}
+/* .contact-page-right-content-container h2 {
+  color: #3559e0;
+} */
 
 .contact-page-left-content-container {
   display: flex;
@@ -66,8 +66,8 @@ main {
 }
 
 .back-to-home img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 
@@ -78,7 +78,7 @@ main {
 
 .back-to-home:hover span {
   display: inline;
-  color: #e587a8;
+  color: #3559e0;
   size: 16px;
 }
 
@@ -142,7 +142,7 @@ main {
 .contact-page-input-group input[type="email"]:required,
 .contact-page-input-group textarea:required,
 .contact-page-input-group message:required {
-  border: 1px solid #a7072d;
+  border: 1px solid #3559e0;
 }
 
 .name-input-group {
@@ -155,9 +155,9 @@ button {
   width: 100%;
   max-width: 424px;
   cursor: pointer;
-  background-color: #e9e6c5;
-  color: #a7072d;
-  border: 1px solid #a7072d;
+  background-color: #fff6e9;
+  color: #3559e0;
+  border: 1px solid #3559e0;
   border-radius: 10px;
   font-size: 20px;
   transition: background-color 0.5s ease;
@@ -166,8 +166,8 @@ button {
 }
 
 button:hover {
-  background-color: #e587a8;
-  border: 1px solid #e587a8;
+  background-color: #4cb9e7;
+  border: 1px solid #4cb9e7;
   color: white;
 }
 

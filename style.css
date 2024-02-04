@@ -2,8 +2,8 @@ body {
   margin: 0;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: #fcfbe8;
-  color: #151318;
+  background-color: #eef5ff;
+  color: #0f2167;
 }
 
 .header-container nav {
@@ -46,7 +46,7 @@ body {
 }
 
 .sub-title .highlight {
-  color: #a7072d;
+  color: #3559e0;
 }
 
 .sub-title .extra-highlight {
@@ -113,7 +113,7 @@ body {
 
 .about-page-right-content-nav-container a:hover {
   font-size: 60px;
-  color: #a7072d;
+  color: #3559e0;
 }
 
 .code-block-container {
@@ -121,8 +121,8 @@ body {
 }
 
 .code-block {
-  color: grey;
-  background-color: #f6f3ce;
+  color: 4CB9E7;
+  background-color: #fff6e9;
   border-radius: 8px;
   font-family: "Courier New", Courier, monospace;
   font-size: 1.1em;
@@ -141,16 +141,16 @@ body {
 }
 
 .code-block .green {
-  color: #a7072d;
+  color: #4cb9e7;
 }
 
 .code-block .yellow {
   /* color: #dd9878; */
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 860px) {
   .header-container nav {
-    background-color: #a7072d;
+    background-color: #ffecd6;
     justify-content: center;
     padding: 10px;
   }

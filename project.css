@@ -2,8 +2,8 @@ body {
   margin: 0;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: #fcfbe8;
-  color: #151318;
+  background-color: #eef5ff;
+  color: #0f2167;
   min-width: 360px;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -15,12 +15,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #a7072d;
-  color: white;
+  background-color: #3559e0;
+  color: #ffecd6;
 }
 
 .header-left-content-container a {
-  color: white;
+  color: #ffecd6;
   font-size: 20px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -32,7 +32,7 @@ body {
 
 .header-left-content-container a:hover {
   font-size: 30px;
-  color: white;
+  color: #ffecd6;
 }
 
 .header-right-content-container nav {
@@ -66,22 +66,22 @@ body {
 }
 
 .main-content-container h2 {
-  color: #a7072d;
+  color: #3559e0;
   font-size: 24px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .sidebar h2 {
-  color: #a7072d;
+  color: #3559e0;
 }
 
 .sidebar a {
-  color: #151318;
+  color: #0f2167;
 }
 
 .sidebar a:hover {
-  color: #e587a8;
+  color: #ffecd6;
 }
 
 .main-content-container h3 {
@@ -90,8 +90,9 @@ body {
   margin-bottom: 10px;
 }
 
+.verification:hover,
 .main-content-container h3:hover {
-  color: #e587a8;
+  color: #4cb9e7;
 }
 
 .main-content-container strong {
@@ -113,12 +114,12 @@ body {
 }
 
 .project-section strong {
-  color: #e587a8;
+  color: #3559e0;
 }
 
 .project-section a,
 .project-section h3 {
-  color: #a7072d;
+  color: #3559e0;
 }
 
 .date-role-container {
@@ -133,8 +134,8 @@ body {
 
 .sidebar {
   flex: 0 0 20%;
-  background-color: rgba(167, 7, 45, 0.2);
-  color: white;
+  background-color: #ffecd6;
+  color: #4cb9e7;
   padding: 20px;
   text-align: left;
 }
@@ -161,12 +162,12 @@ body {
 }
 
 .techniques {
-  color: rgba(167, 7, 45, 0.8);
+  /* color: rgba(167, 7, 45, 0.8); */
   font-weight: 550;
 }
 
 .short-description {
-  color: rgba(167, 7, 45, 0.5);
+  color: #4cb9e7;
 }
 
 .image-gallery img {
@@ -184,7 +185,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
 }
 
 .modal-content {
@@ -194,7 +195,7 @@ body {
 }
 
 .close {
-  color: white;
+  color: #ffecd6;
   position: absolute;
   top: 10px;
   right: 25px;
@@ -233,6 +234,11 @@ body {
 
   .sidebar {
     display: none;
+  }
+
+  .main-content-container p {
+    margin-left: 5px;
+    margin-right: 3px;
   }
 
   .project-section {
