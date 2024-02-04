@@ -2,10 +2,11 @@ body {
   margin: 10px;
   font-family: "Lora", serif;
   text-align: center;
-  background-color: rgb(141, 217, 191, 0.05);
+  background-color: #fcfbe8;
   line-height: 1.5;
   letter-spacing: 1px;
   font-size: 16px;
+  color: #73a3f7;
 }
 
 main {
@@ -13,6 +14,10 @@ main {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.contact-page-right-content-container h2 {
+  color: #73a3f7;
 }
 
 .contact-page-left-content-container {
@@ -73,7 +78,7 @@ main {
 
 .back-to-home:hover span {
   display: inline;
-  color: rgb(141, 217, 191);
+  color: #73a3f7;
   size: 16px;
 }
 
@@ -137,7 +142,7 @@ main {
 .contact-page-input-group input[type="email"]:required,
 .contact-page-input-group textarea:required,
 .contact-page-input-group message:required {
-  border: 1px solidrgb(99, 98, 98) 0;
+  border: 1px solid #73a3f7;
 }
 
 .name-input-group {
@@ -150,9 +155,9 @@ button {
   width: 100%;
   max-width: 424px;
   cursor: pointer;
-  background-color: white;
-  color: rgb(141, 217, 191);
-  border: 1px solid rgb(141, 217, 191);
+  background-color: #f6f3ce;
+  color: #73a3f7;
+  border: 1px solid #73a3f7;
   border-radius: 10px;
   font-size: 20px;
   transition: background-color 0.5s ease;
@@ -161,8 +166,9 @@ button {
 }
 
 button:hover {
-  background-color: rgb(141, 217, 191);
-  color: rgba(0, 0, 0, 0.616);
+  background-color: #68e19a;
+  border: 1px solid #68e19a;
+  color: white;
 }
 
 @media screen and (max-width: 993px) {
