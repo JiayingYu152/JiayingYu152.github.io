@@ -42,7 +42,9 @@ export const projectData = {
       techniques: ["HTML", " CSS", " JavaScript", " formspre"],
       short_description:
         "A one-stop website to list all of my connection social media platform including <strong>Github, LinkedIn, Product Hunt, and Instagram</strong> so that people can know all of my experience here.",
-      tasks: ["Github: https://github.com/JiayingYu152/JiayingYu152.github.io"],
+      tasks: [
+        "<a href=`https://github.com/JiayingYu152/JiayingYu152.github.io`>Github</a>: https://github.com/JiayingYu152/JiayingYu152.github.io ",
+      ],
       image_gallery: [],
       verification: "",
       verification_link: "",
@@ -53,7 +55,7 @@ export const projectData = {
       project_name: "Nexa.ai (website stopped in use)",
       link: "https://www.producthunt.com/products/nexa-ai",
       date: "Oct 2023 – Nov 2023",
-      role: "Frontend Engineer Intern @ Nexa AI",
+      role: "Full Stack Engineer Intern @ Nexa AI",
       techniques: [
         "HTML",
         " CSS",
