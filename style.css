@@ -167,6 +167,7 @@ body {
 
   .about-page-right-content-container {
     flex: 1;
+    padding-top: 0;
   }
 
   .about-page-left-content-container {

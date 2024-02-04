@@ -78,11 +78,18 @@ body {
   color: #151318;
 }
 
+.sidebar a:hover {
+  color: #e587a8;
+}
+
 .main-content-container h3 {
-  /* color: #68e19a; */
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.main-content-container h3:hover {
+  color: #e587a8;
 }
 
 .main-content-container strong {
