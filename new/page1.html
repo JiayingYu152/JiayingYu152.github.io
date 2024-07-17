@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="page1.css" />
+  </head>
+  <body>
+    <div class="page" style="background-color: #eef5ff">
+      <div class="page1-hugest-container">
+        <div class="page1-left-content-container">
+          <div class="page1-left-content-image-container">
+            <!-- src="https://github.com/JiayingYu152/image-and-files/raw/3ad515d87e6bc3e60ebe75375383905a476e6691/IMG_2466%20Background%20Removed.png" -->
+            <img
+              src="https://github.com/JiayingYu152/image-and-files/raw/5be8d2437fd1682c5bf22948fe3d15c5e1a72a82/Belle's%20pic%20without%20bg.png"
+              alt="Jiaying Yu Official Picture"
+            />
+          </div>
+        </div>
+        <div class="page1-right-content-container">
+          <div id="hello-animation"></div>
+          <h3>I'm</h3>
+          <h1>Jiaying Yu (Belle)</h1>
+          <p>
+            Actively seeking the Entry-level/New Grad Software Development
+            Engineer (Full-stack/Frontend/Backend) full-time position NOW!!
+          </p>
+          <p>NYU Alumni | UCR Alumni | Women In Tech</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      fetch("hello-animation.html")
+        .then((response) => response.text())
+        .then((html) => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          const template = doc.querySelector("#hello-animation").content;
+          document.getElementById("hello-animation").appendChild(template);
+        })
+        .catch((error) => {
+          console.error("Error loading learning component:", error);
+        });
+    </script>
+  </body>
+</html>
