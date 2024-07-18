@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="newpanel5.css" />
+  </head>
+  <body>
+    <div class="panel5-hugest-container">
+      <div class="panel5-left-content-container">
+        <ul class="panel5-vertical-social-media-ul">
+          <li>
+            <a>
+              <img src="/data/black_email.svg" alt="email" />
+              <span> Email </span>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <img src="/data/black_github.svg" alt="github" />
+              <span> GitHub</span>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <img src="/data/black_linkedin.svg" alt="linkedin" />
+              <span> LinkedIn </span>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <img src="/data/black_instagram.svg" alt="instagram" />
+              <span> Instagram </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="panel5-right-content-container">
+        <div class="panel5-right-glasses-container">
+          <h1>Contact me if you feel interest.</h1>
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/xzbnzakk"
+            method="post"
+          >
+            <div class="contact-page-input-group">
+              <input
+                type="text"
+                id="first-name"
+                name="first_name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+
+            <div class="contact-page-input-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="contact-page-input-group">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="panel5-submit">Submit</button>
+            <br />
+            <button type="reset" id="panel5-reset" class="panel5-reset">
+              Reset
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+              Accept: "application/json",
+            },
+          })
+            .then((response) => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error("Network response was not ok.");
+              }
+            })
+            .then((data) => {
+              console.log(data);
+              form.reset();
+            })
+            .catch((error) => {
+              console.log("Error", error);
+            });
+        });
+
+        var resetButton = document.getElementById("panel5-reset");
+        resetButton.addEventListener("click", function () {
+          form.reset();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -68,9 +68,10 @@ html::-webkit-scrollbar {
 }
 
 .five {
-  background: #003973;
+  /* background: #003973;
   background: -webkit-linear-gradient(to top, #f3f3e2 20%, #003973);
-  background: linear-gradient(to top, #f3f3e2 20%, #003973);
+  background: linear-gradient(to top, #f3f3e2 20%, #003973); */
+  position: relative;
 }
 
 .line {

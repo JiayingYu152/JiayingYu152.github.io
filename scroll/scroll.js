@@ -172,10 +172,10 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error4) => console.error("Error loading page4.html:", error4));
 
   //fetch panel5.html to PANEL FIVE
-  fetch("panel5.html")
+  fetch("newpanel5.html")
     .then((response5) => response5.text())
     .then((data5) => {
       document.querySelector(".panel.five").innerHTML = data5;
     })
-    .catch((error5) => console.error("Error loading page5.html:", error5));
+    .catch((error5) => console.error("Error loading panel.html:", error5));
 });
