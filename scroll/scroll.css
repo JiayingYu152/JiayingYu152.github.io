@@ -500,51 +500,63 @@ html::-webkit-scrollbar {
 /* PANEL FOUR */
 
 .panel4-background-hugest-container {
-  background: #7f7fd5; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #91eae4,
-    #86a8e7,
-    #7f7fd5
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #91eae4,
-    #86a8e7,
-    #7f7fd5
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: radial-gradient(150deg, #f2f9d7 0%, #fff 100%);
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: relative;
   overflow: hidden;
 }
 
-.panel4-background-inner-blur-layer {
+.panel4-background-inner-blue-circle {
   position: absolute;
-  right: 0;
-  width: 80%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  /* border: 1px solid #fff; */
-  filter: blur(2px);
+  top: 20%;
+  left: 15%;
+  width: 600px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #91eae4 0%, #fff 100%);
+  filter: blur(100px);
   z-index: 1;
 }
 
+.panel4-background-inner-purple-cicle {
+  position: absolute;
+  width: 900px;
+  height: 700px;
+  border-radius: 50%;
+  background-color: #bebefb;
+  filter: blur(200px);
+  bottom: -2%;
+  right: 0%;
+}
+
+/* .panel4-background-inner-blur-layer {
+  position: absolute;
+  width: 70%;
+  height: 60%;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #fff;
+  filter: blur(2px);
+  z-index: 1;
+} */
+
 .panel4-vertical-title {
-  position: fixed;
+  position: absolute;
   left: 5%;
-  /* z-index: 100; */
+  top: 0;
+  z-index: 100;
   padding: 10px;
   font-size: 4em;
+  color: grey;
   border-radius: 5px;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+  /* writing-mode: vertical-rl;
+  text-orientation: upright; */
   font-family: "Cinzel", serif;
   font-optical-sizing: auto;
-  font-weight: 3rem;
   font-weight: 700;
   font-style: normal;
 }
@@ -552,12 +564,20 @@ html::-webkit-scrollbar {
 .panel4-content-container {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 50%;
   margin-left: 50px;
   gap: 30px;
+  z-index: 5;
+  position: absolute;
+  width: 70%;
+  height: 60%;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 5px solid #fff;
+  /* filter: blur(2px); */
+  justify-content: center;
 }
 
 .panel4-content-single-container {
