@@ -1,0 +1,175 @@
+.panel4-hugest-container {
+  display: flex;
+  flex-direction: row;
+  width: 1300px;
+  height: 1300px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.panel4-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel4-inner-container {
+  height: 800px;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.panel4-single-card {
+  position: relative;
+  width: 80px;
+  border-radius: 0.75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-start;
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.panel4-one-single-row {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.panel4-project-name {
+  color: black;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  height: 600px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  justify-content: center;
+  margin: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.panel4-description {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: 0.3s;
+  transform: all 0.3s ease;
+  color: black;
+}
+
+.panel4-description p {
+  color: #b0b0ba;
+  padding-top: 5px;
+}
+
+.panel4-description h2,
+.panel4-description h4 {
+  text-transform: uppercase;
+  margin: 8px 0;
+}
+
+.panel4-banner {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.panel4-description > ul > li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 600px;
+}
+
+input:checked + label .panel4-description {
+  display: flex;
+  opacity: 1;
+}
+
+input:checked + label .panel4-project-name {
+  display: none;
+}
+
+input:not(:checked) + label .panel4-description {
+  display: none;
+}
+
+input:not(:checked) + label .panel4-project-name {
+  opacity: 1;
+}
+
+.panel4-single-card[for="c1"] {
+  background-image: url("/data/LaiDate_BG2.webp");
+}
+
+.panel4-single-card[for="c2"] {
+  background-image: url("/data/porfolio-image.jpeg");
+}
+
+.panel4-single-card[for="c3"] {
+  background-image: url("/data/AMS-image.jpeg");
+}
+
+.panel4-single-card[for="c4"] {
+  background-image: url("/data/orderease-image.jpeg");
+}
+
+.panel4-single-card[for="c5"] {
+  background-image: url("https://github.com/JiayingYu152/image-and-files/raw/b70aa69e0f50454942c677544fc1763027a9c593/roomlink_3.png");
+}
+
+.panel4-single-card[for="c6"] {
+  background-image: url("/data/music-image.jpeg");
+}
+
+.panel4-single-card[for="c7"] {
+  background-image: url("/data/nft-image.jpeg");
+}
+
+.panel4-single-card[for="c1"]::before,
+.panel4-single-card[for="c2"]::before,
+.panel4-single-card[for="c3"]::before,
+.panel4-single-card[for="c4"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  pointer-events: none;
+}
+
+.panel4-single-card[for="c5"]::before,
+.panel4-single-card[for="c6"]::before,
+.panel4-single-card[for="c7"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+}

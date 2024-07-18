@@ -60,7 +60,7 @@ var tl = gsap.timeline({
   },
 });
 
-tl.from(".four p", { scale: 0.3, rotation: 45, autoAlpha: 0, ease: "power2" })
+tl.from(".four *", { scale: 0.3, rotation: 35, autoAlpha: 0, ease: "power2" })
   .from(
     ".line-3",
     { scaleX: 0, transformOrigin: "left center", ease: "none" },
@@ -70,35 +70,60 @@ tl.from(".four p", { scale: 0.3, rotation: 45, autoAlpha: 0, ease: "power2" })
 
 // PANEL FUNCTIONALITY
 document.addEventListener("DOMContentLoaded", function () {
-  //fetch the heart animation to PANEL ONE
-  fetch("heart-animation.html")
-    .then((response1) => response1.text())
-    .then((data1) => {
-      document.querySelector(".heart-animation").innerHTML = data1;
-    })
-    .catch((error1) =>
-      console.error("Error loading heart-animation.html:", error1)
-    );
+  // for loading: Fetch the heart animation and display it for 5 seconds
+  //   fetch("heart-animation.html")
+  //     .then((response1) => response1.text())
+  //     .then((data1) => {
+  //       console.log("Heart animation loaded");
+  //       const heartAnimationContainer = document.getElementById(
+  //         "heart-animation-container"
+  //       );
+  //       const mainContent = document.querySelector("body > .panel.one");
+  //       heartAnimationContainer.innerHTML = data1;
+  //       heartAnimationContainer.style.display = "block";
+  //       mainContent.style.display = "none";
 
-  //fetch panel5.html to PANEL FIVE
-  fetch("panel5.html")
-    .then((response5) => response5.text())
-    .then((data5) => {
-      document.querySelector(".panel.five").innerHTML = data5;
-    })
-    .catch((error5) => console.error("Error loading page5.html:", error5));
+  //       // Hide the heart animation and show the main content after 5 seconds
+  //       setTimeout(() => {
+  //         console.log("Starting fade out");
+  //         heartAnimationContainer.classList.add("heart-animation-fade-out-effect");
 
-  //PANEL TWO download resume button: change color on hover & click
+  //         // After the fade-out transition, hide the container and show the main content
+  //         setTimeout(() => {
+  //           console.log("Switching to main content");
+  //           heartAnimationContainer.remove(); // Completely remove the heart animation
+  //           mainContent.style.display = "block";
+  //         }, 1000); // Match this time with the CSS transition duration
+  //       }, 2000);
+  //     })
+  //     .catch((error1) => {
+  //       console.error("Error loading heart-animation.html:", error1);
+  //     });
+
+  //   //fetch the heart animation to PANEL ONE
+  //   fetch("heart-animation.html")
+  //     .then((response1) => response1.text())
+  //     .then((data1) => {
+  //       document.querySelector(".heart-animation").innerHTML = data1;
+  //     })
+  //     .catch((error1) =>
+  //       console.error("Error loading heart-animation.html:", error1)
+  //     );
+
+  //button light change on hover
+  function handleMouseMove(e) {
+    let rect = e.currentTarget.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+
+    e.currentTarget.style.setProperty("--x", x + "px");
+    e.currentTarget.style.setProperty("--y", y + "px");
+  }
+
+  //PANEL TWO download resume button
   let colorButton = document.querySelector(".panel2-download-button");
   if (colorButton) {
-    colorButton.addEventListener("mousemove", (e) => {
-      let rect = colorButton.getBoundingClientRect();
-      let x = e.clientX - rect.left;
-      let y = e.clientY - rect.top;
-
-      colorButton.style.setProperty("--x", x + "px");
-      colorButton.style.setProperty("--y", y + "px");
-    });
+    colorButton.addEventListener("mousemove", handleMouseMove);
 
     colorButton.addEventListener("click", function (e) {
       e.preventDefault();
@@ -112,6 +137,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  //PANEL FOUR more project button
+  let moreProjectsButton = document.querySelector(
+    ".panel4-more-project-button"
+  );
+  if (moreProjectsButton) {
+    moreProjectsButton.addEventListener("mousemove", handleMouseMove);
+  }
+
   //PANEL THREE: pause the animation when i hover over the tag
   let panel3Tags = document.querySelectorAll(".panel3-tag");
   panel3Tags.forEach((tag) => {
@@ -122,4 +155,20 @@ document.addEventListener("DOMContentLoaded", function () {
       tag.closest(".panel3-right-inner").style.animationPlayState = "running";
     });
   });
+
+  //PANEL FOUR: fetch panel4.html to PANEL FOUR
+  fetch("panel4.html")
+    .then((response4) => response4.text())
+    .then((data4) => {
+      document.querySelector(".panel4-content-container").innerHTML = data4;
+    })
+    .catch((error4) => console.error("Error loading page4.html:", error4));
+
+  //fetch panel5.html to PANEL FIVE
+  fetch("panel5.html")
+    .then((response5) => response5.text())
+    .then((data5) => {
+      document.querySelector(".panel.five").innerHTML = data5;
+    })
+    .catch((error5) => console.error("Error loading page5.html:", error5));
 });

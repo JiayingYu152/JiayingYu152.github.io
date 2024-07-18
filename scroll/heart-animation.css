@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100");
 
+.heart-aniamtion-hugest-container {
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .heart-animation-wrapper {
   text-align: center;
 }
