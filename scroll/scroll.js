@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { scaleX: 0, transformOrigin: "left center", ease: "none" },
       0
     )
-    .to(".four", { backgroundColor: "#003973" }, 0);
+    .to(".four", { backgroundColor: "#0082c8" }, 0);
 
   //fetch GO BACK TO TOP icon
   let goBackToTop = document.querySelector(".go-back-to-top");

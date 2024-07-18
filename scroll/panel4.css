@@ -48,6 +48,11 @@
   justify-content: center;
   align-items: center;
   margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel4-one-single-row:hover {
+  transform: translateY(-10px);
 }
 
 .panel4-project-name {

@@ -6,7 +6,7 @@ html {
   /* font-family: Arial, sans-serif; */
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background: #333;
+  background: #fff;
   color: white;
   position: relative;
 }
@@ -22,7 +22,7 @@ html::-webkit-scrollbar {
   bottom: 20px;
   right: 20px;
   cursor: pointer;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .heart-animation-fade-out-effect {
@@ -40,29 +40,30 @@ html::-webkit-scrollbar {
 }
 
 .one {
-  background: #efefbb;
+  /* background: #efefbb;
   background: -webkit-linear-gradient(to top, #ebeaf4, #efefbb);
-  background: linear-gradient(to top, #efefbb, #ebeaf4);
+  background: linear-gradient(to top, #efefbb, #ebeaf4); */
+  position: relative;
 }
 
 .two {
-  background: #efefbb;
+  /* background: #efefbb; */
   align-items: flex-start;
+  position: relative;
 }
 
 .three {
-  background: #efefbb;
-  background: linear-gradient(
-    to top,
-    #f3f3e2 0%,
-    #f3f3e2 20%,
-    #ebeaf4 50%,
-    #efefbb 100%
-  );
+  /* background: #fff 100%;
+  background: linear-gradient(150deg,
+    #fff 0%
+    #ebeaf4 100%,
+
+  ); */
+  position: relative;
 }
 
 .four {
-  background: #f3f3e2 20%;
+  background: linear-gradient(50deg, #f2f9d7 0%, #fff 100%);
   position: relative;
 }
 
@@ -80,6 +81,73 @@ html::-webkit-scrollbar {
 }
 
 /* PANEL ONE */
+.panel1-ball-animaltion-hugest-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(150deg, #d299c2, #f2f9d7);
+  overflow: hidden;
+  margin: auto;
+  position: absolute;
+}
+
+.panel1-ball-animaltion-container {
+  height: 800px;
+  width: 800px;
+  position: relative;
+  margin-right: 15%;
+}
+
+.panel1-ball-animaltion-bubble {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    circle at 75% 30%,
+    #fff 5px,
+    #ff21c0 8% #5b5b5b 60%,
+    #ff21c0 100%
+  );
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,
+    inset 80px 0 60px #efcde6, inset -20px -60px 100px #f9f6de,
+    inset 0 50px 140px #f9f6de, 0 0 90px #fff;
+  animation: bubble 4s ease-in-out infinite;
+}
+
+.panel1-ball-animaltion-shadow {
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 650px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: 12%;
+  bottom: -100px;
+  filter: blur(1px);
+  animation: shadow 4s ease-in-out infinite;
+}
+
+@keyframes bubble {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-80px);
+  }
+}
+
+@keyframes shadow {
+  0%,
+  100% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
 .panel1-hugest-container {
   display: flex;
   flex-direction: row;
@@ -88,6 +156,7 @@ html::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  z-index: 1;
 }
 
 .panel1-left-content-container {
@@ -99,8 +168,8 @@ html::-webkit-scrollbar {
 
 .panel1-left-content-image-container {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 480px;
   border-radius: 50%/20% 1%;
   overflow: hidden;
   background: #efefbb; /* fallback for old browsers */
@@ -124,6 +193,8 @@ html::-webkit-scrollbar {
 .panel1-left-content-image-container img {
   width: 100%;
   height: auto;
+  overflow: visible;
+  z-index: 2;
 }
 
 .panel1-right-content-container {
@@ -137,6 +208,40 @@ html::-webkit-scrollbar {
 }
 
 /* PANEL TWO */
+.panel2-background-hugest-container {
+  background: linear-gradient(150deg, #e2c8cd 5%, #f2f9d7 50%, #fff 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+}
+
+.panel2-background-inner-yellow-circle {
+  position: absolute;
+  bottom: 30%;
+  right: 20%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffe66a 0%, #fff 100%);
+  filter: blur(100px);
+  z-index: 1;
+}
+
+.panel2-background-inner-green-cicle {
+  position: absolute;
+  width: 1700px;
+  height: 1700px;
+  border-radius: 50%;
+  background-color: #8edee3;
+  filter: blur(120px);
+  bottom: -40%;
+  left: -2%;
+}
+
 .panel2-content-container {
   display: flex;
   flex-direction: column;
@@ -144,10 +249,11 @@ html::-webkit-scrollbar {
   width: 90%;
   height: 100vh;
   position: relative;
+  z-index: 2;
 }
 
 .panel2-title {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -167,9 +273,11 @@ html::-webkit-scrollbar {
 .panel4-more-project-button {
   position: relative;
   padding: 20px 60px;
-  background-color: rgba(45, 45, 45, 1);
+  /* background-color: rgba(45, 45, 45, 1); */
+  background-color: #fff;
   border-radius: 50px;
-  color: #999;
+  /* color: #999; */
+  color:  #ff93b3; 
   font-size: 1.5em;
   text-decoration: none;
   transition: 0.5s;
@@ -212,7 +320,8 @@ html::-webkit-scrollbar {
 .panel2-download-button::after,
 .panel4-more-project-button::after {
   content: "";
-  background-color: rgba(45, 45, 45, 0.8);
+  /* background-color: rgba(45, 45, 45, 0.8); */
+  background-color: #fff;
   position: absolute;
   inset: 2px;
   border-radius: 48px;
@@ -226,9 +335,44 @@ html::-webkit-scrollbar {
 }
 
 /* PANEL THREE */
+.panel3-background-hugest-container {
+  background: linear-gradient(130deg, #8edee3 -5%, #f2f9d7 5%, #fff 100%);
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+}
+
+.panel3-background-inner-red-circle {
+  position: absolute;
+  bottom: 20%;
+  right: 20%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffa36a 0%, #fff 100%);
+  filter: blur(100px);
+}
+
+.panel3-background-inner-green-cicle {
+  position: absolute;
+  width: 1600px;
+  height: 700px;
+  border-radius: 50%;
+  background-color: #8edee3;
+  filter: blur(120px);
+  top: -10%;
+  left: 0%;
+}
+
 .panel3-left-content-container {
   width: 50%;
   color: black;
+  z-index: 2;
 }
 
 .panel3-right-content-container {
@@ -247,6 +391,8 @@ html::-webkit-scrollbar {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #ffa36a;
+  z-index: 5;
 }
 
 .panel3-right-content-container span {
@@ -260,6 +406,7 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  border-radius: 8px;
 }
 
 .panel3-right-inner {
@@ -280,17 +427,23 @@ html::-webkit-scrollbar {
   align-items: center;
   gap: 0 0.2rem;
   color: white;
-  font-size: 0.9rem;
-  background-color: #2676c6;
+  width: fit-content;
+  height: auto;
+  border-radius: 12px;
+  /* font-size: 0.9rem; */
+  background-color: #7cb8c0;
+  padding: 10px 15px;
+  /* background-color: #feb737; */
   pad: 0.7rem 1rem;
   box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2) 0 0.1rem 0.5rem #333 0 0.2rem
     1.5rem rgba(0, 0, 0, 0.5);
 }
 
 .panel3-tag:hover {
-  background-color: #4cb9e7;
-  border: 1px solid #4cb9e7;
+  background-color: #005c6ec3;
+  mix-blend-mode: multiply;
   color: white;
+  font-size: 1.4rem;
   animation: jelly 0.5s;
 }
 
@@ -341,6 +494,41 @@ html::-webkit-scrollbar {
 }
 
 /* PANEL FOUR */
+
+.panel4-background-hugest-container {
+  background: #7f7fd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+}
+
+.panel4-background-inner-blur-layer {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  /* border: 1px solid #fff; */
+  filter: blur(2px);
+  z-index: 1;
+}
+
 .panel4-vertical-title {
   position: fixed;
   left: 5%;
@@ -350,6 +538,11 @@ html::-webkit-scrollbar {
   border-radius: 5px;
   writing-mode: vertical-rl;
   text-orientation: upright;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 3rem;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .panel4-content-container {
