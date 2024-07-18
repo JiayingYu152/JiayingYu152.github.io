@@ -8,12 +8,21 @@ html {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background: #333;
   color: white;
+  position: relative;
 }
 
 body::-webkit-scrollbar,
 html::-webkit-scrollbar {
   width: 0px;
   background: transparent;
+}
+
+.go-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000; 
 }
 
 .heart-animation-fade-out-effect {

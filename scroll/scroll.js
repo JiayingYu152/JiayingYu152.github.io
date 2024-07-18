@@ -1,73 +1,3 @@
-// Scroll animations for the website imported from GSAP ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
-
-// --- PANEL ONE ---
-gsap.to(".panel1-left-content-container", {
-  x: -500,
-  scrollTrigger: {
-    trigger: ".one",
-    start: "top top",
-    end: "bottom top",
-    scrub: true,
-  },
-});
-
-gsap.to(".panel1-right-content-container", {
-  x: 500,
-  scrollTrigger: {
-    trigger: ".one",
-    start: "top top",
-    end: "bottom top",
-    scrub: true,
-  },
-});
-
-// --- PANEL TWO ---
-gsap.from(".line-1", {
-  scrollTrigger: {
-    trigger: ".line-1",
-    scrub: true,
-    start: "top bottom",
-    end: "top top",
-  },
-  scaleX: 0,
-  transformOrigin: "left center",
-  ease: "none",
-});
-
-// --- PANEL THREE ---
-gsap.from(".line-2", {
-  scrollTrigger: {
-    trigger: ".three",
-    scrub: true,
-    pin: true,
-    start: "top top",
-    end: "+=100%",
-  },
-  scaleX: 0,
-  transformOrigin: "left center",
-  ease: "none",
-});
-
-// --- PANEL FOUR ---
-var tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".four",
-    scrub: true,
-    pin: true,
-    start: "top top",
-    end: "+=100%",
-  },
-});
-
-tl.from(".four *", { scale: 0.3, rotation: 35, autoAlpha: 0, ease: "power2" })
-  .from(
-    ".line-3",
-    { scaleX: 0, transformOrigin: "left center", ease: "none" },
-    0
-  )
-  .to(".four", { backgroundColor: "#003973" }, 0);
-
 // PANEL FUNCTIONALITY
 document.addEventListener("DOMContentLoaded", function () {
   // for loading: Fetch the heart animation and display it for 5 seconds
@@ -109,6 +39,83 @@ document.addEventListener("DOMContentLoaded", function () {
   //     .catch((error1) =>
   //       console.error("Error loading heart-animation.html:", error1)
   //     );
+
+  //GSAP animation:
+  // Scroll animations for the website imported from GSAP ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+  // --- PANEL ONE ---
+  gsap.to(".panel1-left-content-container", {
+    x: -500,
+    scrollTrigger: {
+      trigger: ".one",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+  gsap.to(".panel1-right-content-container", {
+    x: 500,
+    scrollTrigger: {
+      trigger: ".one",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+  // --- PANEL TWO ---
+  gsap.from(".line-1", {
+    scrollTrigger: {
+      trigger: ".line-1",
+      scrub: true,
+      start: "top bottom",
+      end: "top top",
+    },
+    scaleX: 0,
+    transformOrigin: "left center",
+    ease: "none",
+  });
+
+  // --- PANEL THREE ---
+  gsap.from(".line-2", {
+    scrollTrigger: {
+      trigger: ".three",
+      scrub: true,
+      pin: true,
+      start: "top top",
+      end: "+=100%",
+    },
+    scaleX: 0,
+    transformOrigin: "left center",
+    ease: "none",
+  });
+
+  // --- PANEL FOUR ---
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".four",
+      scrub: true,
+      pin: true,
+      start: "top top",
+      end: "+=100%",
+    },
+  });
+
+  tl.from(".four *", { scale: 0.3, rotation: 35, autoAlpha: 0, ease: "power2" })
+    .from(
+      ".line-3",
+      { scaleX: 0, transformOrigin: "left center", ease: "none" },
+      0
+    )
+    .to(".four", { backgroundColor: "#003973" }, 0);
+
+  //fetch GO BACK TO TOP icon
+  let goBackToTop = document.querySelector(".go-back-to-top");
+  goBackToTop.addEventListener("click", function () {
+    gsap.to(window, { duration: 4, scrollTo: { y: 0 } });
+  });
 
   //button light change on hover
   function handleMouseMove(e) {
