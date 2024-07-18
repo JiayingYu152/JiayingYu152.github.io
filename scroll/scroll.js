@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  tl.from(".four *", { scale: 0.3, rotation: 35, autoAlpha: 0, ease: "power2" })
+  tl.from(".four *", { scale: 0.3, rotation: 25, autoAlpha: 0, ease: "power2" })
     .from(
       ".line-3",
       { scaleX: 0, transformOrigin: "left center", ease: "none" },
@@ -175,7 +175,16 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("newpanel5.html")
     .then((response5) => response5.text())
     .then((data5) => {
-      document.querySelector(".panel.five").innerHTML = data5;
+      const contactSection = document.getElementById(
+        "panel5-contact-container"
+      );
+      contactSection.innerHTML = data5;
+
+      const inputs = contactSection.querySelectorAll("input, textarea");
+      inputs.forEach((input) => {
+        input.style.display = "block";
+      });
     })
+
     .catch((error5) => console.error("Error loading panel.html:", error5));
 });
