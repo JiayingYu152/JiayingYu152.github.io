@@ -256,6 +256,7 @@ html::-webkit-scrollbar {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #ff93b3;
 }
 
 .panel2-title span {
@@ -267,6 +268,7 @@ html::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  overflow: hidden;
 }
 
 .panel2-download-button,
@@ -277,7 +279,7 @@ html::-webkit-scrollbar {
   background-color: #fff;
   border-radius: 50px;
   /* color: #999; */
-  color:  #ff93b3; 
+  color: #ff93b3;
   font-size: 1.5em;
   text-decoration: none;
   transition: 0.5s;
@@ -329,9 +331,10 @@ html::-webkit-scrollbar {
 
 .panel2-resume {
   width: 60%;
-  height: 100%;
-  top: 33%;
-  position: absolute;
+  height: 800px;
+  margin-top: 30px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* PANEL THREE */
