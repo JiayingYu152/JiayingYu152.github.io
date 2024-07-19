@@ -103,7 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  tl.from(".four *", { scale: 0.3, rotation: 25, autoAlpha: 0, ease: "power2" })
+  tl.from(".four *", {
+    scale: 0.3,
+    rotation: 25,
+    autoAlpha: 0,
+    ease: "power2",
+  })
     .from(
       ".line-3",
       { scaleX: 0, transformOrigin: "left center", ease: "none" },
@@ -180,11 +185,119 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       contactSection.innerHTML = data5;
 
+      //set up INPUT and TEXTAREA
       const inputs = contactSection.querySelectorAll("input, textarea");
       inputs.forEach((input) => {
         input.style.display = "block";
       });
-    })
 
-    .catch((error5) => console.error("Error loading panel.html:", error5));
+      // For submitting the form
+      var form = document.getElementById("contact-form");
+
+      if (form) {
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+              Accept: "application/json",
+            },
+          })
+            .then((response) => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error("Network response was not ok.");
+              }
+            })
+            .then((data) => {
+              console.log(data);
+              form.reset();
+            })
+            .catch((error) => {
+              console.log("Error", error);
+            });
+        });
+
+        // For RESET button
+        var resetButton = document.getElementById("panel5-reset");
+        if (resetButton) {
+          resetButton.addEventListener("click", function () {
+            form.reset();
+          });
+        }
+      }
+
+      // For change hover effect to social media links
+      var emailLink = document.getElementById("email-link");
+      var emailImage = document.getElementById("email-image");
+      var emailText = document.getElementById("email-text");
+
+      var githubLink = document.getElementById("github-link");
+      var githubImage = document.getElementById("github-image");
+      var githubText = document.getElementById("github-text");
+
+      var linkedinLink = document.getElementById("linkedin-link");
+      var linkedinImage = document.getElementById("linkedin-image");
+      var linkedinText = document.getElementById("linkedin-text");
+
+      var instagramLink = document.getElementById("instagram-link");
+      var instagramImage = document.getElementById("instagram-image");
+      var instagramText = document.getElementById("instagram-text");
+
+      if (emailLink && emailText && emailImage) {
+        emailLink.addEventListener("mouseover", function () {
+          emailText.textContent = "jiaying.yu.fs@gmail.com";
+          emailImage.style.opacity = 0;
+          emailText.style.marginLeft = "-74px";
+        });
+        emailLink.addEventListener("mouseout", function () {
+          emailText.textContent = "Email";
+          emailImage.style.opacity = 1;
+          emailText.style.marginLeft = "0";
+        });
+      }
+
+      if (githubLink && githubText && githubImage) {
+        githubLink.addEventListener("mouseover", function () {
+          githubText.textContent = "github.com/JiayingYu152";
+          githubImage.style.opacity = 0;
+          githubText.style.marginLeft = "-74px";
+        });
+        githubLink.addEventListener("mouseout", function () {
+          githubText.textContent = "GitHub";
+          githubImage.style.opacity = 1;
+          githubText.style.marginLeft = "0";
+        });
+      }
+
+      if (linkedinLink && linkedinText && linkedinImage) {
+        linkedinLink.addEventListener("mouseover", function () {
+          linkedinText.textContent = "/jiaying-yu-belle/";
+          linkedinImage.style.opacity = 0;
+          linkedinText.style.marginLeft = "-74px";
+        });
+        linkedinLink.addEventListener("mouseout", function () {
+          linkedinText.textContent = "LinkedIn";
+          linkedinImage.style.opacity = 1;
+          linkedinText.style.marginLeft = "0";
+        });
+      }
+
+      if (instagramLink && instagramText && instagramImage) {
+        instagramLink.addEventListener("mouseover", function () {
+          instagramText.textContent = "/biubiu125";
+          instagramImage.style.opacity = 0;
+          instagramText.style.marginLeft = "-74px";
+        });
+        instagramLink.addEventListener("mouseout", function () {
+          instagramText.textContent = "Instagram";
+          instagramImage.style.opacity = 1;
+          instagramText.style.marginLeft = "0";
+        });
+      }
+    })
+    .catch((error5) => console.error("Error loading newpanel5.html:", error5));
 });

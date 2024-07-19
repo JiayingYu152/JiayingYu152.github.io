@@ -1,27 +1,28 @@
 .panel4-hugest-container {
   display: flex;
   flex-direction: row;
-  width: 1300px;
-  height: 1300px;
+  width: 100vw;
+  height: 100%;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  overflow: hidden;
 }
 
-.panel4-wrapper {
+/* .panel4-wrapper {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .panel4-inner-container {
-  height: 800px;
+  max-height: 800px;
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: nowrap;
   justify-content: start;
+  height: 90%;
 }
 
 .panel4-single-card {
@@ -44,11 +45,12 @@
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
-  height: 100%;
+  height: 95%;
   justify-content: center;
   align-items: center;
   margin: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* overflow-y: auto; */
 }
 
 .panel4-one-single-row:hover {
@@ -79,11 +81,6 @@
   color: black;
 }
 
-.panel4-description p {
-  color: #b0b0ba;
-  padding-top: 5px;
-}
-
 .panel4-description h2,
 .panel4-description h4 {
   text-transform: uppercase;
@@ -92,11 +89,21 @@
 
 .panel4-banner {
   color: rgba(0, 0, 0, 0.4);
+  margin: 2px 0;
+  font-size: 0.8rem;
+}
+
+.panel4-description ul {
+  margin-top: 0;
 }
 
 .panel4-description > ul > li {
   font-size: 14px;
   line-height: 1.6;
+}
+
+.panel4-description span {
+  margin-bottom: 8px;
 }
 
 input {
