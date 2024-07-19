@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+.hugest-container {
+  background: radial-gradient(circle, #f2f9d7 0%, #fff 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner-blur-layer {
+  position: absolute;
+  width: 70%;
+  height: 60%;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #fff;
+  filter: blur(2px);
+  z-index: 1;
+}
+
+.inner-red-circle {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 600px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #91eae4 0%, #fff 100%);
+  filter: blur(100px);
+  z-index: 1;
+}
+
+.inner-green-cicle {
+  position: absolute;
+  width: 900px;
+  height: 700px;
+  border-radius: 50%;
+  background-color: #7f7fd5;
+  filter: blur(200px);
+  bottom: -2%;
+  right: 0%;
+}

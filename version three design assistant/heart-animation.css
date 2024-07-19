@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100");
+
+.heart-aniamtion-hugest-container {
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.heart-animation-wrapper {
+  text-align: center;
+}
+
+.the-heart {
+  position: relative;
+  font-size: 0;
+  width: 138px;
+}
+
+.piece {
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ec2d73;
+  left: calc(var(--i) * 16px);
+  animation: piece-1 3s infinite;
+  animation-delay: calc(var(--i) * 0.15s);
+}
+
+.piece:nth-child(1) {
+  animation-name: piece-1;
+}
+
+.piece:nth-child(2) {
+  background-color: #eb5324;
+  animation-name: piece-2;
+}
+
+.piece:nth-child(3) {
+  background-color: #fdc800;
+  animation-name: piece-3;
+}
+
+.piece:nth-child(4) {
+  background-color: #47b264;
+  animation-name: piece-4;
+}
+
+.piece:nth-child(5) {
+  background-color: #1470bd;
+  animation-name: piece-5;
+}
+
+.piece:nth-child(6) {
+  background-color: #76469a;
+  animation-name: piece-4;
+}
+
+.piece:nth-child(7) {
+  background-color: #ec2d73;
+  animation-name: piece-3;
+}
+
+.piece:nth-child(8) {
+  background-color: #eb5324;
+  animation-name: piece-2;
+}
+
+.piece:nth-child(9) {
+  background-color: #fdc800;
+  animation-name: piece-1;
+}
+
+@keyframes piece-1 {
+  0%,
+  10%,
+  90%,
+  100% {
+    height: 10px;
+    top: -5px;
+  }
+
+  45%,
+  55% {
+    height: 30px;
+    top: -15px;
+  }
+}
+
+@keyframes piece-2 {
+  0%,
+  10%,
+  90%,
+  100% {
+    height: 10px;
+    top: -5px;
+  }
+
+  45%,
+  55% {
+    height: 60px;
+    top: -31px;
+  }
+}
+
+@keyframes piece-3 {
+  0%,
+  10%,
+  90%,
+  100% {
+    height: 10px;
+    top: -5px;
+  }
+
+  45%,
+  55% {
+    height: 80px;
+    top: -37px;
+  }
+}
+
+@keyframes piece-4 {
+  0%,
+  10%,
+  90%,
+  100% {
+    height: 10px;
+    top: -5px;
+  }
+
+  45%,
+  55% {
+    height: 90px;
+    top: -31px;
+  }
+}
+
+@keyframes piece-5 {
+  0%,
+  10%,
+  90%,
+  100% {
+    height: 10px;
+    top: -5px;
+  }
+
+  45%,
+  55% {
+    height: 94px;
+    top: -23px;
+  }
+}

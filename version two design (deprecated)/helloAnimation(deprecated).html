@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello</title>
+    <style>
+      .hello-svg-text {
+        fill: none;
+        stroke: black;
+        stroke-width: 2px;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 5s forwards;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="500" hight="100" viewBox="0 0 500 100">
+      <text x="50" y="50" class="hello-svg-text" font-size="48" dy=".5em">
+        Hello
+      </text>
+    </svg>
+  </body>
+</html>

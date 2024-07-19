@@ -1,0 +1,32 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #eef5ff;
+  color: #0f2167;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  position: relative;
+}
+.page {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.main-page-side-scroll-down-div {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
