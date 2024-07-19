@@ -122,6 +122,16 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(window, { duration: 4, scrollTo: { y: 0 } });
   });
 
+  // Fetch NEXT PAGE icon： scroll to next page
+  let nextPage = document.querySelector(".scroll-down-icon-container");
+  nextPage.addEventListener("click", function () {
+    let currentScroll =
+      window.pageYOffset || document.documentElement.scrollTop;
+    let nextPagePosition = currentScroll + window.innerHeight;
+
+    gsap.to(window, { duration: 1, scrollTo: { y: nextPagePosition } });
+  });
+
   //button light change on hover
   function handleMouseMove(e) {
     let rect = e.currentTarget.getBoundingClientRect();

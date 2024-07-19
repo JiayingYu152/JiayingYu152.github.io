@@ -18,11 +18,67 @@ html::-webkit-scrollbar {
 }
 
 .go-back-to-top {
+  color: #bebefb;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.go-back-to-top:hover {
+  color: #b3b3f5;
+}
+
+.scroll-down-icon-container {
+  z-index: 1000;
   position: fixed;
   bottom: 20px;
   right: 20px;
   cursor: pointer;
-  z-index: 1000;
+  width: 40px;
+  height: 50px;
+}
+
+.scroll-down-icon {
+  width: 80%;
+  height: auto;
+  animation: down 1.5s ease-in-out infinite;
+}
+
+.scroll-down-shadow {
+  position: fixed;
+  right: 36px;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 15px;
+  height: 5px;
+  border-radius: 10%;
+  filter: blur(1px);
+  animation: downShadow 1.5s ease-in-out infinite;
+}
+
+.scroll-down-icon-container:hover .scroll-down-icon,
+.scroll-down-icon-container:hover .scroll-down-shadow {
+  animation-play-state: paused;
+}
+
+@keyframes down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes downShadow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.6);
+  }
 }
 
 .heart-animation-fade-out-effect {
@@ -142,10 +198,10 @@ html::-webkit-scrollbar {
 @keyframes shadow {
   0%,
   100% {
-    transform: scale(0.5);
+    transform: scale(1);
   }
   50% {
-    transform: scale(1);
+    transform: scale(0.5);
   }
 }
 
