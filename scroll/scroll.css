@@ -121,6 +121,7 @@ html::-webkit-scrollbar {
 .four {
   background: linear-gradient(50deg, #f2f9d7 0%, #fff 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .five {

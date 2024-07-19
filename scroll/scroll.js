@@ -83,9 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".three",
       scrub: true,
-      pin: true,
-      start: "top top",
-      end: "+=100%",
+      start: "top bottom",
+      end: "top top",
     },
     scaleX: 0,
     transformOrigin: "left center",
@@ -93,28 +92,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // --- PANEL FOUR ---
-  var tl = gsap.timeline({
+  // Project Experience text fade out at Top 20%
+  gsap.to(".panel4-vertical-title", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".panel.four",
+      start: "top 20%",
+      endTrigger: ".panel.four",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+  gsap.from(".four *", {
     scrollTrigger: {
       trigger: ".four",
       scrub: true,
-      pin: true,
-      start: "top top",
-      end: "+=100%",
+      start: "top bottom",
+      end: "top top",
     },
-  });
-
-  tl.from(".four *", {
     scale: 0.3,
     rotation: 25,
     autoAlpha: 0,
     ease: "power2",
-  })
-    .from(
-      ".line-3",
-      { scaleX: 0, transformOrigin: "left center", ease: "none" },
-      0
-    )
-    .to(".four", { backgroundColor: "#0082c8" }, 0);
+    stagger: 0.2,
+  });
 
   //fetch GO BACK TO TOP icon
   let goBackToTop = document.querySelector(".go-back-to-top");
