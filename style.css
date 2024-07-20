@@ -24,13 +24,12 @@ html::-webkit-scrollbar {
   z-index: 10;
   text-align: center;
   background-color: #bebefb;
-  filter: blur(0.5px);
   padding: 10px;
 }
 .go-back-to-top {
   color: #bebefb;
   position: fixed;
-  top: 20px;
+  top: 50px;
   right: 20px;
   cursor: pointer;
   z-index: 1000;
@@ -331,7 +330,6 @@ html::-webkit-scrollbar {
   font-weight: bold;
   margin-bottom: 20px;
   color: #ff93b3;
-  font-family: "Cinzel", serif;
 }
 
 .panel2-title span {
@@ -348,15 +346,13 @@ html::-webkit-scrollbar {
   margin-bottom: 5%;
 }
 
-.panel2-download-button,
-.panel4-more-project-button {
+.panel2-download-button {
   position: relative;
   padding: 20px 60px;
   background-color: #fff;
   border-radius: 50px;
   color: #ff93b3;
   font-size: 1.5em;
-  height: 100px;
   text-align: center;
   text-decoration: none;
   transition: 0.5s;
@@ -365,21 +361,19 @@ html::-webkit-scrollbar {
   cursor: pointer;
 }
 
-.panel2-download-button span,
-.panel4-more-project-button span {
+.panel2-download-button span {
   position: relative;
   z-index: 1;
   letter-spacing: 0.2em;
+  top: -13px;
 }
 
-.panel2-download-button:hover,
-.panel4-more-project-button:hover {
+.panel2-download-button:hover {
   color: var(--clr);
   text-shadow: 0 0 15px var(--clr), 0 0 40px var(--clr);
 }
 
-.panel2-download-button::before,
-.panel4-more-project-button::before {
+.panel2-download-button::before {
   content: "";
   position: absolute;
   top: var(--y);
@@ -392,13 +386,11 @@ html::-webkit-scrollbar {
   transition: 0.5s, top 0s, left 0s;
 }
 
-.panel2-download-button:hover::before,
-.panel4-more-project-button:hover::before {
+.panel2-download-button:hover::before {
   opacity: 1;
 }
 
-.panel2-download-button::after,
-.panel4-more-project-button::after {
+.panel2-download-button::after {
   content: "";
   /* background-color: rgba(45, 45, 45, 0.8); */
   background-color: #fff;
@@ -461,8 +453,9 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 30%;
-  margin-left: 10%;
+  width: 40%;
+  height: 90%;
+  margin-left: 5%;
 }
 
 .panel3-left-single-area {
@@ -473,7 +466,7 @@ html::-webkit-scrollbar {
 }
 
 .panel3-left-single-area h4 {
-  margin-right: 10px;
+  margin: 15px 15px 15px 0px;
 }
 
 .panel3-left-content-container ul li {
@@ -490,13 +483,13 @@ html::-webkit-scrollbar {
 }
 
 .panel3-right-rolling-content-list {
-  font-family: "Monsterrat", sans-serif;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 30px;
   border-radius: 8px;
+  padding: 15px 0;
 }
 
 .panel3-right-inner {
@@ -513,19 +506,18 @@ html::-webkit-scrollbar {
 }
 
 .panel3-tag {
+  font-family: "Cinzel", serif;
   display: flex;
   align-items: center;
   gap: 0 0.2rem;
   color: white;
   width: fit-content;
   height: auto;
-  border-radius: 16px;
+  border-radius: 0.4rem;
   font-size: 0.9rem;
   background-color: #7cb8c0;
-  padding: 5px 10px;
-  pad: 0.7rem 1rem;
-  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2) 0 0.1rem 0.5rem #333 0 0.2rem
-    1.5rem rgba(0, 0, 0, 0.5);
+  padding: 0.2rem 1rem;
+  box-shadow: 0 0.1rem 0.2rem #00000033, 0 0.1rem 0.5rem #0000004d;
 }
 
 .panel3-tag:hover {

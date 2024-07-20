@@ -160,14 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  //PANEL FOUR more project button
-  let moreProjectsButton = document.querySelector(
-    ".panel4-more-project-button"
-  );
-  if (moreProjectsButton) {
-    moreProjectsButton.addEventListener("mousemove", handleMouseMove);
-  }
-
   //PANEL THREE: pause the animation when i hover over the tag
   let panel3Tags = document.querySelectorAll(".panel3-tag");
   panel3Tags.forEach((tag) => {
