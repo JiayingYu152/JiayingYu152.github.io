@@ -189,7 +189,6 @@
 .contact-page-input-group textarea,
 .contact-page-input-group message {
   width: 100%;
-  padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
   font-size: 16px;
@@ -203,38 +202,16 @@
   border: 1px solid #ff8ba7;
   box-sizing: border-box;
   outline-color: #ff8ba7;
+  padding: 10px 20px;
 }
 
 .contact-page-input-group textarea {
   resize: none;
   width: 100%;
   height: 100px;
-  padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
 }
-
-/* .page5-submit {
-    padding: 10px 20px;
-    width: 100%;
-    max-width: 424px;
-    cursor: pointer;
-    background-color: #fff6e9;
-    color: #3559e0;
-    border: 1px solid #3559e0;
-    border-radius: 10px;
-    font-size: 20px;
-    transition: background-color 0.5s ease;
-    font-family: "Merriweather", serif;
-    margin: 10px 0;
-  }
-  
-  .page5-submit:hover {
-    background-color: #4cb9e7;
-    border: 1px solid #4cb9e7;
-    color: white;
-    animation: jelly 0.5s;
-  } */
 
 .panel5-submit {
   width: 100%;

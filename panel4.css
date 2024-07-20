@@ -87,6 +87,10 @@
   margin: 8px 0;
 }
 
+.panel4-description h5 {
+  margin: 3px 0;
+}
+
 .panel4-banner {
   color: rgba(0, 0, 0, 0.4);
   margin: 2px 0;
