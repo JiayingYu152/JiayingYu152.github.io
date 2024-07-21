@@ -189,3 +189,21 @@ input:not(:checked) + label .panel4-project-name {
   background-color: rgba(255, 255, 255, 0.9);
   pointer-events: none;
 }
+
+/* screen width for iPad */
+@media (min-width: 500px) and (max-width: 1200px) {
+  .panel4-hugest-container {
+    width: 98%;
+    margin: 20px 50px;
+  }
+  .input:checked + label {
+    width: 500px;
+  }
+  .panel4-inner-container {
+    overflow-x: scroll;
+  }
+}
+
+/* screen width for phone */
+@media (min-width: 500px) {
+}
