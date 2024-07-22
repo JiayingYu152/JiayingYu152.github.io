@@ -474,6 +474,7 @@ html::-webkit-scrollbar {
 
 .panel3-left-content-container ul li {
   text-align: -webkit-auto;
+  letter-spacing: 1.2px;
 }
 
 .panel3-title {
@@ -677,6 +678,19 @@ html::-webkit-scrollbar {
   .go-back-to-top {
     top: 20px;
   }
+  .panel2-jump-resume {
+    display: block;
+    margin-top: 20px;
+  }
+  .panel2-resume {
+    width: 90%;
+  }
+  .panel3-title {
+    font-size: 3rem;
+  }
+  .panel4-description > ul > li {
+    line-height: 1.5;
+  }
 }
 
 /* screen width for phone */
@@ -750,5 +764,26 @@ html::-webkit-scrollbar {
   }
   .panel3-left-single-area h4 {
     margin: 5px 5px 5px 0px;
+  }
+  .panel3-left-content-container h4 {
+    margin: 5px 5px 5px 0px;
+    font-size: 0.85rem;
+  }
+  .panel3-left-single-area,
+  .panel3-left-content-container ul li {
+    font-size: 0.85rem;
+  }
+  .panel4-vertical-title {
+    font-size: 2em;
+  }
+  .panel4-inner-container {
+    flex-direction: column;
+    width: 90%;
+    gap: 5px;
+  }
+  .panel4-content-container {
+    width: 90%;
+    margin: 0;
+    transform: translate(0px, 8%);
   }
 }

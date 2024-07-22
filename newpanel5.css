@@ -431,6 +431,10 @@
   }
 }
 
+.panel5-bottom-content-container {
+  display: none;
+}
+
 /* screen width for iPad */
 @media (min-width: 500px) and (max-width: 1200px) {
   .panel5-hugest-container {
@@ -450,20 +454,18 @@
 
   .panel5-right-glasses-container {
     position: unset;
-    right: 0;
+    height: 500px;
+    margin-top: 10%;
   }
 
   .panel5-bottom-content-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3% auto;
+    gap: 10px;
   }
-}
-.panel5-bottom-content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 5% auto;
-  gap: 10px;
 }
 
 .panel5-bottom-single-area {
@@ -511,6 +513,9 @@
 
   .panel5-bottom-content-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
     margin: 5%;
   }

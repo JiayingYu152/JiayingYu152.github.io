@@ -75,7 +75,7 @@
   justify-content: center;
   flex-direction: column;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(5px);
   transition-delay: 0.3s;
   transform: all 0.3s ease;
   color: black;
@@ -135,7 +135,7 @@ input:not(:checked) + label .panel4-project-name {
   opacity: 1;
 }
 
-.panel4-single-card[for="c1"] {
+/* .panel4-single-card[for="c1"] {
   background-image: url("/data/LaiDate_BG2.webp");
 }
 
@@ -161,6 +161,10 @@ input:not(:checked) + label .panel4-project-name {
 
 .panel4-single-card[for="c7"] {
   background-image: url("/data/nft-image.jpeg");
+} */
+
+.panel4-single-card {
+  background: linear-gradient(#fff, #bebefb);
 }
 
 .panel4-single-card[for="c1"]::before,
@@ -201,9 +205,67 @@ input:not(:checked) + label .panel4-project-name {
   }
   .panel4-inner-container {
     overflow-x: scroll;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .panel4-one-single-row {
+    margin: 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+  input:not(:checked) + label .panel4-project-name {
+    height: 100%;
+    font-size: 1.4rem;
+  }
+  .panel4-one-single-row:hover {
+    transform: unset;
+    height: 100%;
+    /* overflow: auto; */
+    padding: 10px;
+  }
+  .panel4-description ul {
+    margin-top: 0;
+    margin-right: 10px;
+    text-align: justify;
+  }
+
+  .panel4-description a {
+    font-size: 1.2rem;
   }
 }
 
 /* screen width for phone */
-@media (min-width: 500px) {
+@media (max-width: 500px) {
+  .panel4-single-card {
+    width: 95%;
+    height: 100px;
+  }
+  input:checked + label {
+    width: 95%;
+    height: 150%;
+  }
+  .panel4-project-name {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    writing-mode: unset;
+    text-orientation: unset;
+    justify-content: center;
+    margin: 0;
+  }
+  .panel4-one-single-row {
+    margin: 5px;
+    overflow-y: scroll;
+    align-items: flex-start;
+  }
+  .panel4-description ul {
+    margin-right: 10px;
+  }
+  .panel4-description > ul > li {
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: justify;
+  }
 }
