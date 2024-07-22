@@ -244,6 +244,9 @@ input:not(:checked) + label .panel4-project-name {
     width: 95%;
     height: 150%;
   }
+  .panel3-left-content-container ul {
+    overflow-y: auto;
+  }
   .panel4-project-name {
     color: black;
     display: flex;

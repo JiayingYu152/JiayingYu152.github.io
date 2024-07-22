@@ -523,5 +523,6 @@
   .panel5-bottom-single-area {
     width: 80%;
     text-wrap: wrap;
+    font-size: 12px;
   }
 }
