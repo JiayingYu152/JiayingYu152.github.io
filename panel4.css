@@ -268,4 +268,10 @@ input:not(:checked) + label .panel4-project-name {
     line-height: 1.2;
     text-align: justify;
   }
+  input:not(:checked) + label .panel4-project-name {
+    font-size: 1.2rem;
+  }
+  .panel4-description span {
+    font-size: 12px;
+  }
 }
