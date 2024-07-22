@@ -232,6 +232,9 @@ input:not(:checked) + label .panel4-project-name {
   .panel4-description a {
     font-size: 1.2rem;
   }
+  .panel4-description > ul > li {
+    text-align: start;
+  }
 }
 
 /* screen width for phone */
@@ -269,7 +272,7 @@ input:not(:checked) + label .panel4-project-name {
   .panel4-description > ul > li {
     font-size: 14px;
     line-height: 1.2;
-    text-align: justify;
+    text-align: start;
   }
   input:not(:checked) + label .panel4-project-name {
     font-size: 1.2rem;
