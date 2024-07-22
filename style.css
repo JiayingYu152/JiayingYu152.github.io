@@ -102,6 +102,7 @@ html::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .one {
@@ -398,7 +399,9 @@ html::-webkit-scrollbar {
   inset: 2px;
   border-radius: 48px;
 }
-
+.panel2-jump-resume {
+  display: none;
+}
 .panel2-resume {
   width: 60%;
   height: 800px;
@@ -471,6 +474,7 @@ html::-webkit-scrollbar {
 
 .panel3-left-content-container ul li {
   text-align: -webkit-auto;
+  letter-spacing: 1.2px;
 }
 
 .panel3-title {
@@ -518,6 +522,7 @@ html::-webkit-scrollbar {
   background-color: #7cb8c0;
   padding: 0.2rem 1rem;
   box-shadow: 0 0.1rem 0.2rem #00000033, 0 0.1rem 0.5rem #0000004d;
+  cursor: pointer;
 }
 
 .panel3-tag:hover {
@@ -664,4 +669,122 @@ html::-webkit-scrollbar {
   padding: 20px;
   background: white;
   color: black;
+}
+
+/* screen width for iPad */
+@media (min-width: 500px) and (max-width: 1200px) {
+  .main-page-banner {
+    display: none;
+  }
+  .go-back-to-top {
+    top: 20px;
+  }
+  .panel2-jump-resume {
+    display: block;
+    margin-top: 20px;
+  }
+  .panel2-resume {
+    width: 90%;
+  }
+  .panel3-title {
+    font-size: 3rem;
+  }
+  .panel4-description > ul > li {
+    line-height: 1.5;
+  }
+}
+
+/* screen width for phone */
+@media (max-width: 500px) {
+  .main-page-banner {
+    display: none;
+  }
+  .go-back-to-top {
+    top: 20px;
+  }
+  .panel1-ball-animaltion-container {
+    height: 400px;
+    width: 400px;
+    margin-right: 10%;
+  }
+  .panel1-ball-animaltion-shadow {
+    width: 270px;
+    height: 30px;
+    right: 15%;
+  }
+  .panel1-left-content-container {
+    display: none;
+  }
+  .panel1-right-content-container {
+    width: 90%;
+  }
+  .panel2-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .panel2-inner-content-container p {
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    margin: 5px 0 8px 0;
+  }
+  .panel2-download-button {
+    padding: 15px 60px;
+    font-size: unset;
+  }
+  .panel2-jump-resume {
+    display: block;
+    margin: 10px 0;
+  }
+  .panel2-resume {
+    width: 90%;
+    overflow: auto;
+    margin-top: 15px;
+  }
+  .panel3-left-content-container {
+    position: absolute;
+    width: 98%;
+    top: 25%;
+    height: 90%;
+  }
+  .panel3-right-content-container {
+    width: 100%;
+    height: 90%;
+    margin-left: unset;
+  }
+  .panel3-title {
+    font-size: 2rem;
+    width: 100%;
+    position: absolute;
+  }
+  .line.line-2 {
+    width: 90%;
+    height: 10px;
+  }
+  .panel3-right-rolling-content-list {
+    display: none;
+  }
+  .panel3-left-single-area h4 {
+    margin: 5px 5px 5px 0px;
+  }
+  .panel3-left-content-container h4 {
+    margin: 5px 5px 5px 0px;
+    font-size: 0.85rem;
+  }
+  .panel3-left-single-area,
+  .panel3-left-content-container ul li {
+    font-size: 0.85rem;
+  }
+  .panel4-vertical-title {
+    font-size: 2em;
+  }
+  .panel4-inner-container {
+    flex-direction: column;
+    width: 90%;
+    gap: 5px;
+  }
+  .panel4-content-container {
+    width: 90%;
+    margin: 0;
+    transform: translate(0px, 8%);
+  }
 }
