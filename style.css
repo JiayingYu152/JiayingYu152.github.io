@@ -702,15 +702,18 @@ html::-webkit-scrollbar {
   .go-back-to-top {
     top: 20px;
   }
+  .scroll-down-icon-container {
+    bottom: 50px;
+  }
   .panel1-ball-animaltion-container {
     height: 400px;
     width: 400px;
-    margin-right: 10%;
+    margin-right: 4%;
   }
   .panel1-ball-animaltion-shadow {
     width: 270px;
     height: 30px;
-    right: 15%;
+    right: 16%;
   }
   .panel1-left-content-container {
     display: none;
@@ -743,7 +746,7 @@ html::-webkit-scrollbar {
   .panel3-left-content-container {
     position: absolute;
     width: 98%;
-    top: 25%;
+    top: 17%;
     height: 90%;
   }
   .panel3-right-content-container {
@@ -752,7 +755,7 @@ html::-webkit-scrollbar {
     margin-left: unset;
   }
   .panel3-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 100%;
     position: absolute;
   }
@@ -786,5 +789,12 @@ html::-webkit-scrollbar {
     width: 90%;
     margin: 0;
     transform: translate(0px, 8%);
+  }
+  .panel4-description h2,
+  .panel4-description h4 {
+    font-size: 1.2rem;
+  }
+  .panel4-description > ul > li {
+    font-size: 12px;
   }
 }

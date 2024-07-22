@@ -493,12 +493,12 @@
   }
 
   .panel5-right-glasses-container {
-    top: 5%;
+    top: 2%;
     right: unset;
     width: 80%;
     padding: 5%;
     margin: 5%;
-    height: 55%;
+    height: 60%;
     justify-content: flex-start;
   }
 
