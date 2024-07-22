@@ -699,11 +699,14 @@ html::-webkit-scrollbar {
   .main-page-banner {
     display: none;
   }
+  .panel1-right-content-container h1 {
+    font-size: 2.5rem;
+  }
   .go-back-to-top {
     top: 20px;
   }
   .scroll-down-icon-container {
-    bottom: 50px;
+    bottom: 30px;
   }
   .panel1-ball-animaltion-container {
     height: 400px;
@@ -790,9 +793,11 @@ html::-webkit-scrollbar {
     margin: 0;
     transform: translate(0px, 8%);
   }
-  .panel4-description h2,
-  .panel4-description h4 {
+  .panel4-description h2 {
     font-size: 1.2rem;
+  }
+  .panel4-description h4 {
+    font-size: 1rem;
   }
   .panel4-description > ul > li {
     font-size: 12px;
