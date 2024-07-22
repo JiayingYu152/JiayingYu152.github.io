@@ -522,6 +522,7 @@ html::-webkit-scrollbar {
   background-color: #7cb8c0;
   padding: 0.2rem 1rem;
   box-shadow: 0 0.1rem 0.2rem #00000033, 0 0.1rem 0.5rem #0000004d;
+  cursor: pointer;
 }
 
 .panel3-tag:hover {
