@@ -164,7 +164,7 @@ input:not(:checked) + label .panel4-project-name {
 } */
 
 .panel4-single-card {
-  background: linear-gradient(#fff, #bebefb);
+  background: linear-gradient(var(--whiteColor), var(--bannerPurple));
 }
 
 .panel4-single-card[for="c1"]::before,

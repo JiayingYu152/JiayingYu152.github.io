@@ -1,13 +1,24 @@
 body,
 html {
+  --bannerPurple: #bebefb;
+  --backgroundLightYellow: #f2f9d7;
+  --backgroundSecondYellow: #efefbb;
+  --backgroundLightGrey: #d4d3dd;
+  --darkGreyColor: #7b7b7b;
+  --backgroundVividGreen: #8edee3;
+  --backgroundLightToTransparentWhite: rgba(255, 255, 255, 0.3);
+  --whiteColor: #fff;
+  --backgroundRotateDegree: 150deg;
+  --circleBorderRadius: 50%;
+
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   /* font-family: Arial, sans-serif; */
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background: #fff;
-  color: white;
+  background: var(--whiteColor);
+  color: var(--whiteColor);
   position: relative;
 }
 
@@ -23,11 +34,11 @@ html::-webkit-scrollbar {
   width: 100vw;
   z-index: 10;
   text-align: center;
-  background-color: #bebefb;
+  background-color: var(--bannerPurple);
   padding: 10px;
 }
 .go-back-to-top {
-  color: #bebefb;
+  color: var(--bannerPurple);
   position: fixed;
   top: 50px;
   right: 20px;
@@ -106,22 +117,22 @@ html::-webkit-scrollbar {
 }
 
 .one {
-  /* background: #efefbb;
-  background: -webkit-linear-gradient(to top, #ebeaf4, #efefbb);
-  background: linear-gradient(to top, #efefbb, #ebeaf4); */
+  /* background: var(--backgroundSecondYellow);
+  background: -webkit-linear-gradient(to top, #ebeaf4, var(--backgroundSecondYellow));
+  background: linear-gradient(to top, var(--backgroundSecondYellow), #ebeaf4); */
   position: relative;
 }
 
 .two {
-  /* background: #efefbb; */
+  /* background: var(--backgroundSecondYellow); */
   align-items: flex-start;
   position: relative;
 }
 
 .three {
-  /* background: #fff 100%;
-  background: linear-gradient(150deg,
-    #fff 0%
+  /* background: var(--whiteColor) 100%;
+  background: linear-gradient(var(--backgroundRotateDegree),
+    var(--whiteColor) 0%
     #ebeaf4 100%,
 
   ); */
@@ -129,7 +140,7 @@ html::-webkit-scrollbar {
 }
 
 .four {
-  background: linear-gradient(50deg, #f2f9d7 0%, #fff 100%);
+  background: linear-gradient(50deg, var(--backgroundLightYellow) 0%, var(--whiteColor) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -146,7 +157,7 @@ html::-webkit-scrollbar {
   width: 100%;
   height: 10px;
   border-radius: 5px;
-  background: white;
+  background: var(--whiteColor);
 }
 
 /* PANEL ONE */
@@ -156,7 +167,7 @@ html::-webkit-scrollbar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background: linear-gradient(150deg, #d299c2, #f2f9d7);
+  background: linear-gradient(var(--backgroundRotateDegree), #d299c2, var(--backgroundLightYellow));
   overflow: hidden;
   margin: auto;
   position: absolute;
@@ -174,14 +185,14 @@ html::-webkit-scrollbar {
   height: 100%;
   background: linear-gradient(
     circle at 75% 30%,
-    #fff 5px,
+    var(--whiteColor) 5px,
     #ff21c0 8% #5b5b5b 60%,
     #ff21c0 100%
   );
-  border-radius: 50%;
-  box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,
+  border-radius: var(--circleBorderRadius);
+  box-shadow: inset 0 0 20px var(--whiteColor), inset 10px 0 46px #eaf5fc,
     inset 80px 0 60px #efcde6, inset -20px -60px 100px #f9f6de,
-    inset 0 50px 140px #f9f6de, 0 0 90px #fff;
+    inset 0 50px 140px #f9f6de, 0 0 90px var(--whiteColor);
   animation: bubble 4s ease-in-out infinite;
 }
 
@@ -189,7 +200,7 @@ html::-webkit-scrollbar {
   background-color: rgba(0, 0, 0, 0.15);
   width: 380px;
   height: 35px;
-  border-radius: 50%;
+  border-radius:var(--circleBorderRadius);
   position: absolute;
   right: 12%;
   bottom: -100px;
@@ -241,16 +252,16 @@ html::-webkit-scrollbar {
   height: 450px;
   border-radius: 50%/20% 1%;
   overflow: hidden;
-  background: #efefbb; /* fallback for old browsers */
+  background: var(--backgroundSecondYellow); /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
-    #d4d3dd,
-    #efefbb
+    var(--backgroundLightGrey),
+    var(--backgroundSecondYellow)
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to top,
-    #d4d3dd,
-    #efefbb
+    var(--backgroundLightGrey),
+    var(--backgroundSecondYellow)
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   display: flex;
@@ -283,7 +294,7 @@ html::-webkit-scrollbar {
 
 /* PANEL TWO */
 .panel2-background-hugest-container {
-  background: linear-gradient(150deg, #e2c8cd 5%, #f2f9d7 50%, #fff 100%);
+  background: linear-gradient(var(--backgroundRotateDegree), #e2c8cd 5%, var(--backgroundLightYellow) 50%, var(--whiteColor) 100%);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -299,8 +310,8 @@ html::-webkit-scrollbar {
   right: 20%;
   width: 300px;
   height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ffe66a 0%, #fff 100%);
+  border-radius: var(--circleBorderRadius);
+  background: radial-gradient(circle, #ffe66a 0%, var(--whiteColor) 100%);
   filter: blur(100px);
   z-index: 1;
 }
@@ -309,8 +320,8 @@ html::-webkit-scrollbar {
   position: absolute;
   width: 700px;
   height: 700px;
-  border-radius: 50%;
-  background-color: #8edee3;
+  border-radius: var(--circleBorderRadius);
+  background-color: var(--backgroundVividGreen);
   filter: blur(120px);
   bottom: -40%;
   left: -2%;
@@ -350,7 +361,7 @@ html::-webkit-scrollbar {
 .panel2-download-button {
   position: relative;
   padding: 20px 60px;
-  background-color: #fff;
+  background-color: var(--whiteColor);
   border-radius: 50px;
   color: #ff93b3;
   font-size: 1.5em;
@@ -394,7 +405,7 @@ html::-webkit-scrollbar {
 .panel2-download-button::after {
   content: "";
   /* background-color: rgba(45, 45, 45, 0.8); */
-  background-color: #fff;
+  background-color: var(--whiteColor);
   position: absolute;
   inset: 2px;
   border-radius: 48px;
@@ -413,8 +424,8 @@ html::-webkit-scrollbar {
 
 /* PANEL THREE */
 .panel3-background-hugest-container {
-  background: linear-gradient(130deg, #8edee3 -5%, #f2f9d7 5%, #fff 100%);
-  background-color: #fff;
+  background: linear-gradient(130deg, var(--backgroundVividGreen) -5%, var(--backgroundLightYellow) 5%, var(--whiteColor) 100%);
+  background-color: var(--whiteColor);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -430,8 +441,8 @@ html::-webkit-scrollbar {
   right: 20%;
   width: 500px;
   height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ffa36a 0%, #fff 100%);
+  border-radius: var(--circleBorderRadius);
+  background: radial-gradient(circle, #ffa36a 0%, var(--whiteColor) 100%);
   filter: blur(120px);
 }
 
@@ -439,8 +450,8 @@ html::-webkit-scrollbar {
   position: absolute;
   width: 700px;
   height: 400px;
-  border-radius: 50%;
-  background-color: #8edee3;
+  border-radius: var(--circleBorderRadius);
+  background-color: var(--backgroundVividGreen);
   filter: blur(120px);
   top: -10%;
   left: 0%;
@@ -514,7 +525,7 @@ html::-webkit-scrollbar {
   display: flex;
   align-items: center;
   gap: 0 0.2rem;
-  color: white;
+  color: var(--whiteColor);
   width: fit-content;
   height: auto;
   border-radius: 0.4rem;
@@ -528,7 +539,7 @@ html::-webkit-scrollbar {
 .panel3-tag:hover {
   background-color: #005c6ec3;
   mix-blend-mode: multiply;
-  color: white;
+  color: var(--whiteColor);
   font-size: 1.2rem;
   animation: jelly 0.5s;
 }
@@ -583,7 +594,7 @@ html::-webkit-scrollbar {
 /* PANEL FOUR */
 
 .panel4-background-hugest-container {
-  background: radial-gradient(150deg, #f2f9d7 0%, #fff 100%);
+  background: radial-gradient(var(--backgroundRotateDegree), var(--backgroundLightYellow) 0%, var(--whiteColor) 100%);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -599,8 +610,8 @@ html::-webkit-scrollbar {
   left: 15%;
   width: 600px;
   height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #91eae4 0%, #fff 100%);
+  border-radius: var(--circleBorderRadius);
+  background: radial-gradient(circle, #91eae4 0%, var(--whiteColor) 100%);
   filter: blur(100px);
   z-index: 1;
 }
@@ -609,8 +620,8 @@ html::-webkit-scrollbar {
   position: absolute;
   width: 900px;
   height: 700px;
-  border-radius: 50%;
-  background-color: #bebefb;
+  border-radius: var(--circleBorderRadius);
+  background-color: var(--bannerPurple);
   filter: blur(200px);
   bottom: -2%;
   right: 0%;
@@ -621,8 +632,8 @@ html::-webkit-scrollbar {
   width: 70%;
   height: 60%;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid #fff;
+  background: var(--backgroundLightToTransparentWhite);
+  border: 1px solid var(--whiteColor);
   filter: blur(2px);
   z-index: 1;
 } */
@@ -634,9 +645,9 @@ html::-webkit-scrollbar {
   z-index: 100;
   padding: 10px;
   font-size: 4em;
-  color: #7b7b7b;
+  color: var(--darkGreyColor);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
-    -2px -2px 5px rgba(255, 255, 255, 0.3);
+    -2px -2px 5px var(--backgroundLightToTransparentWhite);
   /* writing-mode: vertical-rl;
   text-orientation: upright; */
   font-family: "Cinzel", serif;
@@ -657,8 +668,8 @@ html::-webkit-scrollbar {
   width: 90%;
   height: 80%;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.3);
-  border: 5px solid #fff;
+  background: var(--backgroundLightToTransparentWhite);
+  border: 5px solid var(--whiteColor);
   /* filter: blur(2px); */
   justify-content: center;
 }
@@ -667,7 +678,7 @@ html::-webkit-scrollbar {
   border: 1px solid #333;
   border-radius: 10px;
   padding: 20px;
-  background: white;
+  background: var(--whiteColor);
   color: black;
 }
 
